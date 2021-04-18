@@ -11,7 +11,7 @@ const routes = [
       {
         path: '/index',
         name: 'Index',
-        component: () => import('@/views/Home'),
+        component: () => import('@/views/index'),
         meta: { title: '首页', icon: 'tachometer-alt', requireAuth: true },
       },
       {

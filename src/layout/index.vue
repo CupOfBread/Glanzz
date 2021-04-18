@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import Nav from '@/layout/nav'
+import Nav from '@/layout/Nav'
 export default {
   name: 'Index',
   components: {

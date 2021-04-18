@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import UserGravatar from '@/layout/nav/user_gravatar'
+import UserGravatar from '@/layout/nav/UserGravatar'
 export default {
   components: {
     UserGravatar
@@ -83,7 +83,7 @@ export default {
 <style lang="scss" scoped>
 header {
   width: 100%;
-  height: 75px;
+  min-height: 75px;
   background-color: rgba(255, 255, 255, 0.2);
   -webkit-transition: all 0.4s ease;
   transition: all 0.6s ease;
