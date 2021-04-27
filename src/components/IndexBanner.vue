@@ -64,7 +64,7 @@ export default {
 
 <style lang="scss" scoped>
 .banner {
-  background-image: url('../assets/img/bg1.png');
+  background-image: url('../assets/img/bg2.png');
   width: 100%;
   margin: 0;
   padding: 0;
