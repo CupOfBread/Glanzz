@@ -7,7 +7,8 @@ import axios from 'axios'
 import Nprogress from 'nprogress'
 import cookies from 'js-cookie'
 import 'nprogress/nprogress.css'
-
+import ElementPlus from 'element-plus';
+import 'element-plus/lib/theme-chalk/index.css';
 
 // request拦截
 const app=createApp(App)
@@ -33,4 +34,4 @@ axios.interceptors.response.use(
   }
 )
 
-app.use(store).use(router).mount('#app')
+app.use(store).use(router).use(ElementPlus).mount('#app')
