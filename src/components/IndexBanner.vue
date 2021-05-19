@@ -8,7 +8,7 @@
     <div class="site-info">
       <div class="logo animate__animated animate__rubberBand"><a href="https://lab.cupbread.cn"><img src="../assets/img/logo.png"></a></div>
       <div class="info animate__animated animate__rubberBand">
-        <p>看似没有更新，实际上是我懒得写更新记录。</p>
+        <p>前端装修中。。。</p>
       </div>
       <div class="social animate__animated animate__rubberBand">
         <li><a href="https://weibo.com/u/5232879316"

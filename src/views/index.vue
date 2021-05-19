@@ -10,6 +10,12 @@
     </el-col>
   </el-row>
   <Footer />
+
+  <el-backtop :bottom="80"
+              :visibility-height=100>
+    <a class="cd-top"
+       style="top: -22px;"></a>
+  </el-backtop>
 </template>
 
 <script>
@@ -26,6 +32,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.el-backtop {
+  box-shadow: none;
+  z-index: 98;
+  background-color: transparent;
+  &:hover {
+    background-color: transparent;
+  }
+  .cd-top {
+    top: -30px;
+    position: fixed;
+    right: 7%;
+    width: 70px;
+    height: 86%;
+    background: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/scroll.png)
+      no-repeat center;
+    background-size: contain;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    opacity: 1;
+    // animation: float 2s linear infinite;
+    animation: fadeInDown 0.7s 0.1s ease both;
+    // -moz-animation: fadeInDown 0.7s 0.1s ease both;
+  }
+}
+
 .el-row {
   margin: 0 auto;
   margin-bottom: 20px;
@@ -33,25 +64,5 @@ export default {
   &:last-child {
     margin-bottom: 0;
   }
-}
-.el-col {
-  border-radius: 4px;
-}
-.bg-purple-dark {
-  background: #99a9bf;
-}
-.bg-purple {
-  background: #d3dce6;
-}
-.bg-purple-light {
-  background: #e5e9f2;
-}
-.grid-content {
-  border-radius: 4px;
-  min-height: 36px;
-}
-.row-bg {
-  padding: 10px 0;
-  background-color: #f9fafc;
 }
 </style>

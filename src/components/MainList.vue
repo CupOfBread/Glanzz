@@ -5,7 +5,7 @@
         <img src="@/assets/img/bg1.png">
       </div>
       <div class="info">
-        <p class="title"><a>开发日历/文章详情实例</a></p>
+        <p class="title"><a>文章详情实例</a></p>
         <p class="sub-title">
           <i class="fa fa-calendar"></i><span>2020-5-30</span>
           <i class="fa fa-user"></i><span>一杯面包</span>
