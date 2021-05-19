@@ -6,19 +6,21 @@
       <MainList />
     </el-col>
     <el-col :span="8">
-      <div class="grid-content bg-purple-light">sidebar</div>
+      <Sidebar />
     </el-col>
   </el-row>
-
+  <Footer />
 </template>
 
 <script>
 import IndexBanner from '@/components/IndexBanner'
 import Notice from '@/components/Notice'
 import MainList from '@/components/MainList'
+import Sidebar from '@/components/Sidebar'
+import Footer from '@/components/Footer'
 export default {
   components: {
-    IndexBanner, Notice, MainList
+    IndexBanner, Notice, MainList, Sidebar, Footer
   }
 }
 </script>
