@@ -6,7 +6,7 @@
       <a href="https://lab.cupbread.cn"><img src="@/assets/img/logo.png"></a>
     </div>
     <UserGravatar />
-    <div class="navi animate__fadeInRight animate__animated">
+    <div class="navi">
       <ul>
         <li><a @click="open('/index')"><i class="fa fa-flag"
                aria-hidden="true"></i>首页</a></li>
