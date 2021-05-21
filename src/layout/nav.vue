@@ -8,17 +8,17 @@
     <UserGravatar />
     <div class="navi">
       <ul>
-        <li><a @click="open('/index')"><i class="fa fa-flag"
+        <li><a @click="open('/')"><i class="fa fa-flag"
                aria-hidden="true"></i>首页</a></li>
-        <li><a @click="open('/index')"><i class="fa fa-laptop"
+        <li><a @click="open('/')"><i class="fa fa-laptop"
                aria-hidden="true"></i>编程开发</a></li>
-        <li><a @click="open('/index')"><i class="fa fa-puzzle-piece"
+        <li><a @click="open('/')"><i class="fa fa-puzzle-piece"
                aria-hidden="true"></i>艺术设计</a></li>
-        <li><a @click="open('/index')"><i class="fa fa-coffee"
+        <li><a @click="open('/')"><i class="fa fa-coffee"
                aria-hidden="true"></i>资讯与看法</a></li>
-        <li><a @click="open('/index')"><i class="fa fa-check"
+        <li><a @click="open('/')"><i class="fa fa-check"
                aria-hidden="true"></i>思想与总结</a></li>
-        <li><a @click="open('/index')"><i class="fa fa-paper-plane"
+        <li><a @click="open('/')"><i class="fa fa-paper-plane"
                aria-hidden="true"></i>关于</a></li>
         <li><a href="">有子菜单</a>
           <ul class="sub-menu">

@@ -1,0 +1,54 @@
+// 文章页面专属样
+.content {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'gogo', 'Source Han Serif SC', 'Source Han Serif',
+    'source-han-serif-sc', 'PT Serif', 'SongTi SC', 'MicroSoft Yahei', Georgia,
+    serif;
+  .detail {
+    h1 {
+      font-size: 2em;
+      font-weight: 700;
+      line-height: 2em;
+      // padding-left: 10px;
+      // border-left: 3px solid orange;
+    }
+    h1::before,
+    h2::before,
+    h3::before {
+      content: '';
+      padding-left: 10px;
+      border-left: 4px solid orange;
+    }
+    h2 {
+      font-size: 1.7em;
+      line-height: 1.8em;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      line-height: 1.6em;
+    }
+
+    h4 {
+      font-size: 1.4em;
+      line-height: 1.4em;
+    }
+
+    h5,
+    h6 {
+      font-size: 1.2em;
+      line-height: 1.2em;
+    }
+    p {
+      color: #575757;
+      line-height: 30px;
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+    }
+  }
+}

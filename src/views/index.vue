@@ -9,7 +9,6 @@
       <Sidebar />
     </el-col>
   </el-row>
-  <Footer />
 
   <el-backtop :bottom="80"
               :visibility-height=100>
@@ -23,10 +22,10 @@ import IndexBanner from '@/components/IndexBanner'
 import Notice from '@/components/Notice'
 import MainList from '@/components/MainList'
 import Sidebar from '@/components/Sidebar'
-import Footer from '@/components/Footer'
+
 export default {
   components: {
-    IndexBanner, Notice, MainList, Sidebar, Footer
+    IndexBanner, Notice, MainList, Sidebar
   }
 }
 </script>

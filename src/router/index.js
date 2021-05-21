@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 import Layout from '@/layout'
 
@@ -6,32 +6,45 @@ const routes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/index',
+    // redirect: '/index',
     children: [
       {
-        path: '/index',
+        path: '/',
         name: 'Index',
         component: () => import('@/views/index'),
         meta: { title: '首页', icon: 'tachometer-alt', requireAuth: true },
-      },
+      }
+    ],
+  },
+  {
+    path: '/p',
+    component: Layout,
+    children: [
       {
-        path: '/about',
-        component: Layout,
-        children: [
-          {
-            path: '/about',
-            name: 'about',
-            requireAuth: true,
-            component: () => import('@/views/About'),
-          },
-        ],
+        path: '/p',
+        name: 'Page',
+        requireAuth: true,
+        component: () => import('@/views/Page'),
       },
     ],
-  }
+  },
+  {
+    path: '/about',
+    component: Layout,
+    children: [
+      {
+        path: '/about',
+        name: 'about',
+        requireAuth: true,
+        component: () => import('@/views/About'),
+      },
+    ],
+  },
+  
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes
 })
 

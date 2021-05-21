@@ -30,7 +30,8 @@
         <p class="desc">进入分类文章目录</p>
       </div>
     </div>
-    <div class="article">
+    <div class="article"
+         @click="open('/p')">
       <div class="header-pic">
         <img src="@/assets/img/bg3.png">
       </div>
