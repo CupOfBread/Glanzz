@@ -161,7 +161,7 @@ header {
           margin: 0 5px;
         }
         .sub-menu {
-          display: block;
+          display: none;
           opacity: 1;
           position: absolute;
           background: #fff;

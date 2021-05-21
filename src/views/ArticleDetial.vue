@@ -21,20 +21,9 @@
     <div class="content animate__animated animate__slideInUp"
          ref="content"
          v-loading="loading">
-      <div class="detail">
-        <h1>这篇文章的ID是：{{article.id}}</h1>
-        <h2>历史性的一步！增加了文章目录！</h2>
-        <h3>345</h3>
-        <p>这是第一段的内容啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
-        <p>这是一个文章内容内容内容内容内容内容内容内容内容容内容内容内容内容内容内容内容内容容内容内容内容内容内容内容内容内容内容</p>
-        <p>文章内容也在紧锣密鼓地排版中，由于typo.css不符合预期，所以就打算自己写样式了。</p>
+      <div class="detail"
+           v-html="article.content">
 
-        <h1>文章信息</h1>
-        <p>{{article}}</p>
-        <p>文章是否发布:{{article.publish}}</p>
-        <p>文章id:{{article.id}}</p>
-        <p>文章内容:{{article.content}}</p>
-        <p>文章views:{{article.views}}</p>
       </div>
 
     </div>
@@ -49,7 +38,8 @@ export default {
       scrollHeight: '',
       article: {
         id: '',
-        title: '文章标题'
+        title: '文章标题',
+        content: ''
       }
     }
   },
@@ -61,11 +51,15 @@ export default {
   mounted () {
     this.article.id = this.$route.params.id
     this.scrollHeight = 'height:' + window.getComputedStyle(this.$refs.content).height
+    this.article.content = "<h1>这篇文章的ID是：{{article.id}}</h1><h2>历史性的一步！增加了文章目录！</h2><h3>345</h3><p>这是第一段的内容啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p><p>这是一个文章内容内容内容内容内容内容内容内容内容容内容内容内容内容内容内容内容内容容内容内容内容内容内容内容内容内容内容</p><p>文章内容也在紧锣密鼓地排版中，由于typo.css不符合预期，所以就打算自己写样式了。</p><h1>文章信息</h1><p>{{article}}</p><p>文章是否发布:{{article.publish}}</p><p>文章id:{{article.id}}</p><p>文章内容:{{article.content}}</p><p>文章views:{{article.views}}</p>"
   }
 }
 
 </script>
 
+<style lang="scss">
+@import '@/styles/Page.scss';
+</style>
 <style lang="scss" scoped>
 @import '@/styles/Page.scss';
 
