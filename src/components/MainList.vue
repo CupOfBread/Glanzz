@@ -1,8 +1,9 @@
 <template>
   <div class="main-list">
-    <div class="article">
+    <div class="article"
+         @click="open('/a/12')">
       <div class="header-pic">
-        <img src="@/assets/img/bg1.png">
+        <img src="https://i.loli.net/2021/05/21/lYBCXTHq7J3wzQR.jpg">
       </div>
       <div class="info">
         <p class="title"><a>文章详情实例</a></p>
@@ -13,6 +14,23 @@
           <i class="fa fa-eye"></i><span>100</span>
         </p>
         <p class="desc">没错没错，点我就可以打开文章详情页没错没错，点我就可以打开文章详情页没错没错，点我就可以打开文章详情页没错没错，点我就可以打开文章详情页实例和开发日历没错没错，点我就可以打开文章详情页实例和开发日历没错没错，点我就可以打开文章详情页实例和开发日历没错没错，点我就可以打开文章详情页实例和开发日历</p>
+      </div>
+    </div>
+
+    <div class="article"
+         @click="open('/p')">
+      <div class="header-pic">
+        <img src="https://i.loli.net/2021/05/21/3FeVrTmJdtwnWhp.jpg">
+      </div>
+      <div class="info">
+        <p class="title"><a>Page页面</a></p>
+        <p class="sub-title">
+          <i class="fa fa-calendar"></i><span>2020-5-29</span>
+          <i class="fa fa-user"></i><span>BUG汤</span>
+          <i class="fa fa-bookmark"></i><span>艺术设计</span>
+          <i class="fa fa-eye"></i><span>78</span>
+        </p>
+        <p class="desc">没错，就是一个简单的page页面</p>
       </div>
     </div>
     <div class="article">
@@ -28,22 +46,6 @@
           <i class="fa fa-eye"></i><span>100</span>
         </p>
         <p class="desc">进入分类文章目录</p>
-      </div>
-    </div>
-    <div class="article"
-         @click="open('/p')">
-      <div class="header-pic">
-        <img src="@/assets/img/bg3.png">
-      </div>
-      <div class="info">
-        <p class="title"><a>Page页面</a></p>
-        <p class="sub-title">
-          <i class="fa fa-calendar"></i><span>2020-5-29</span>
-          <i class="fa fa-user"></i><span>BUG汤</span>
-          <i class="fa fa-bookmark"></i><span>艺术设计</span>
-          <i class="fa fa-eye"></i><span>78</span>
-        </p>
-        <p class="desc">没错，就是一个简单的page页面</p>
       </div>
     </div>
     <div class="article">

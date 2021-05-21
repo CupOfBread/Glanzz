@@ -6,7 +6,6 @@ const routes = [
   {
     path: '/',
     component: Layout,
-    // redirect: '/index',
     children: [
       {
         path: '/',
@@ -14,6 +13,19 @@ const routes = [
         component: () => import('@/views/index'),
         meta: { title: '首页', icon: 'tachometer-alt', requireAuth: true },
       }
+    ],
+  },
+  {
+    path: '/a',
+    component: Layout,
+    redirect:'/a/none',
+    children: [
+      {
+        path: '/a/:id',
+        name: 'Article',
+        requireAuth: true,
+        component: () => import('@/views/ArticleDetial'),
+      },
     ],
   },
   {

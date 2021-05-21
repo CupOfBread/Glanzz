@@ -1,11 +1,8 @@
 module.exports = {
-  publicPath:'./',
+  publicPath:'/',
   devServer: {
     disableHostCheck: true,
     host: '0.0.0.0',
-  },
-  css: {
-    extract: false,
   },
   // 默认打包入口
   chainWebpack: (config) => {

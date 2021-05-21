@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="top-bg animate__animated animate__fadeInDown">
-      <img src="https://i.loli.net/2020/05/15/FuMGBOjTpv4aQI6.jpg"
+      <img src="https://i.loli.net/2021/05/21/3FeVrTmJdtwnWhp.jpg"
            alt="">
       <div class="page-header">
         <div class="title">Page</div>
