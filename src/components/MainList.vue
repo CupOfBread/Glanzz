@@ -13,7 +13,7 @@
           <i class="fa fa-bookmark"></i><span>编程开发</span>
           <i class="fa fa-eye"></i><span>100</span>
         </p>
-        <p class="desc">没错没错，点我就可以打开文章详情页没错没错，点我就可以打开文章详情页没错没错，点我就可以打开文章详情页没错没错，点我就可以打开文章详情页实例和开发日历没错没错，点我就可以打开文章详情页实例和开发日历没错没错，点我就可以打开文章详情页实例和开发日历没错没错，点我就可以打开文章详情页实例和开发日历</p>
+        <p class="desc">你也是来Rua雷姆的？</p>
       </div>
     </div>
 
@@ -33,9 +33,10 @@
         <p class="desc">没错，就是一个简单的page页面</p>
       </div>
     </div>
-    <div class="article">
+    <div class="article"
+         @click="open('/c')">
       <div class="header-pic">
-        <img src="@/assets/img/bg2.png">
+        <img src="https://i.loli.net/2021/05/22/uAFvWa7IfwLJe6c.jpg">
       </div>
       <div class="info">
         <p class="title"><a>分类文章目录</a></p>

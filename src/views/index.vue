@@ -9,7 +9,6 @@
       <Sidebar />
     </el-col>
   </el-row>
-
 </template>
 
 <script>
@@ -21,6 +20,15 @@ import Sidebar from '@/components/Sidebar'
 export default {
   components: {
     IndexBanner, Notice, MainList, Sidebar
+  },
+  data () {
+    return {
+    }
+  },
+  mounted () {
+    if (window.innerWidth < 1024) {
+      alert("本网站并未对手机端进行优化，请使用电脑端访问！")
+    }
   }
 }
 </script>

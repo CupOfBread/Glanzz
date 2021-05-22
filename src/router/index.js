@@ -39,6 +39,17 @@ const routes = [
         component: () => import('@/views/Page'),
       },
     ],
+  },{
+    path: '/c',
+    component: Layout,
+    children: [
+      {
+        path: '/c',
+        name: 'Category',
+        requireAuth: true,
+        component: () => import('@/views/Category'),
+      },
+    ],
   },
   {
     path: '/about',

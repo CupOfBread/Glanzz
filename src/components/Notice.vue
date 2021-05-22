@@ -1,7 +1,8 @@
 <template>
   <div class="notice">
     <i class="fa fa-bookmark"
-       aria-hidden="true"></i>项目仍然在建设中，由于后端尚未部署，故部分功能处于不可用状态。
+       aria-hidden="true"></i>
+    项目仍然在建设中，由于后端尚未部署，故部分功能处于不可用状态。可点击下面的列表进行页面的预览。
   </div>
 </template>
 

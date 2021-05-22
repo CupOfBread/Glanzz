@@ -10,17 +10,25 @@
       <ul>
         <li><a @click="open('/')"><i class="fa fa-flag"
                aria-hidden="true"></i>首页</a></li>
-        <li><a @click="open('/')"><i class="fa fa-laptop"
+        <li><a @click="open('/a/12')"><i class="fa fa-laptop"
+               aria-hidden="true"></i>文章详情</a></li>
+        <li><a @click="open('/p')"><i class="fa fa-puzzle-piece"
+               aria-hidden="true"></i>Page页面</a></li>
+        <li><a @click="open('/c')"><i class="fa fa-coffee"
+               aria-hidden="true"></i>分类文章</a></li>
+        <li><a @click="open('/')"><i class="fa fa-check"
+               aria-hidden="true"></i>友情链接</a></li>
+        <!-- <li><a @click="open('/')"><i class="fa fa-laptop"
                aria-hidden="true"></i>编程开发</a></li>
         <li><a @click="open('/')"><i class="fa fa-puzzle-piece"
                aria-hidden="true"></i>艺术设计</a></li>
         <li><a @click="open('/')"><i class="fa fa-coffee"
                aria-hidden="true"></i>资讯与看法</a></li>
         <li><a @click="open('/')"><i class="fa fa-check"
-               aria-hidden="true"></i>思想与总结</a></li>
-        <li><a @click="open('/')"><i class="fa fa-paper-plane"
+               aria-hidden="true"></i>思想与总结</a></li> -->
+        <li><a @click="open('/about')"><i class="fa fa-paper-plane"
                aria-hidden="true"></i>关于</a></li>
-        <li><a href="">有子菜单</a>
+        <!-- <li><a href="">有子菜单</a>
           <ul class="sub-menu">
             <li><a href="https://lab.cupbread.cn/coding/cpp/">C++</a></li>
             <li><a href="https://lab.cupbread.cn/coding/java/">Java</a></li>
@@ -28,7 +36,7 @@
             <li><a href="https://lab.cupbread.cn/coding/vue/">Vue</a></li>
             <li><a href="https://lab.cupbread.cn/coding/network/">网络技术</a></li>
           </ul>
-        </li>
+        </li> -->
       </ul>
     </div>
 
@@ -161,7 +169,7 @@ header {
           margin: 0 5px;
         }
         .sub-menu {
-          display: none;
+          display: block;
           opacity: 1;
           position: absolute;
           background: #fff;

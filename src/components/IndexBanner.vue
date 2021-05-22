@@ -8,7 +8,7 @@
     <div class="site-info">
       <div class="logo animate__animated animate__rubberBand"><a href="https://lab.cupbread.cn"><img src="../assets/img/logo.png"></a></div>
       <div class="info animate__animated animate__rubberBand">
-        <p>前端装修中。。。</p>
+        <p>别骂了别骂了，在写了，在写了！(＞﹏＜)</p>
       </div>
       <div class="social animate__animated animate__rubberBand">
         <li><a href="https://weibo.com/u/5232879316"
@@ -32,7 +32,8 @@
              title="CloudMusic"><img src="../assets/icon/wangyiyun.png"></a></li>
       </div>
     </div>
-    <div class="waveWrapper waveAnimation">
+    <div class="waveWrapper waveAnimation"
+         v-if="windowWidth>=1000">
       <div class="waveWrapperInner bgTop">
         <div class="wave waveTop"></div>
       </div>
@@ -50,13 +51,17 @@
 export default {
   created () {
     this.big_bg.height = window.innerHeight + 'px'
+    this.windowWidth = window.innerWidth
   },
   data () {
     return {
       big_bg: {
         height: ''
-      }
+      },
+      windowWidth: 0
     }
+  },
+  mounted () {
   }
 
 }

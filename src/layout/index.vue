@@ -1,5 +1,5 @@
 <template>
-  <Nav />
+  <Nav v-if="windowWidth>1000" />
   <router-view />
   <Footer />
 </template>
@@ -11,7 +11,15 @@ export default {
   name: 'Index',
   components: {
     Nav, Footer
-  }
+  },
+  data () {
+    return {
+      windowWidth: 0
+    }
+  },
+  created () {
+    this.windowWidth = window.innerWidth
+  },
 }
 </script>
 
