@@ -9,10 +9,16 @@ module.exports = {
     // 生产环境
     config.when(process.env.NODE_ENV === 'production', (config) => {
       config.set('externals', {
+        'vue': 'Vue',
+        'element-plus':'ElementPlus'
       })
     })
 
     // 开发环境
-    config.when(process.env.NODE_ENV === 'development', (config) => {})
+    config.when(process.env.NODE_ENV === 'development', (config) => {
+      config.set('externals', {
+        
+      })
+    })
   },
 }

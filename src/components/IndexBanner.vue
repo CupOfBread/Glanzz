@@ -6,7 +6,7 @@
          :style="big_bg">
     </div>
     <div class="site-info">
-      <div class="logo animate__animated animate__rubberBand"><a href="https://lab.cupbread.cn"><img src="../assets/img/logo.png"></a></div>
+      <div class="logo animate__animated animate__rubberBand"><a href="/"><img src="../assets/img/logo.png"></a></div>
       <div class="info animate__animated animate__rubberBand">
         <p>别骂了别骂了，在写了，在写了！(＞﹏＜)</p>
       </div>
