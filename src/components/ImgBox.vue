@@ -1,5 +1,21 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+// const skipImgBox = () => {
+//   let height =
+//     window.innerHeight ||
+//     document.documentElement.clientHeight ||
+//     document.body.clientHeight
+
+//   var timer = setInterval(function () {
+//     let osTop = document.documentElement.scrollTop || document.body.scrollTop
+//     let ispeed = Math.floor(osTop / 10)
+//     document.documentElement.scrollTop = document.body.scrollTop =
+//       osTop + ispeed
+//     if (osTop >= height) {
+//       clearInterval(timer)
+//     }
+//   }, 30)
+// }
 </script>
 
 <template>
@@ -47,6 +63,11 @@ import { ref } from 'vue'
         </div>
       </div>
     </figure>
+    <div
+      class="absolute bottom-6 left-2/4 text-white text-4xl z-30 animate-bounce cursor-pointer"
+    >
+      <i class="fa-solid fa-angle-down"></i>
+    </div>
   </div>
 </template>
 
@@ -69,7 +90,7 @@ import { ref } from 'vue'
       transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%);
       text-align: center;
-      z-index: 99;
+      z-index: 10;
       -webkit-transition: 0.4s ease all;
       -moz-transition: 0.4s ease all;
       -o-transition: 0.4s ease all;
@@ -101,8 +122,8 @@ import { ref } from 'vue'
       .center-text {
         margin: auto;
         font-size: 80px;
-        text-transform: uppercase;
         font-weight: 700;
+        text-shadow: 2px 2px 5px rgb(73, 73, 73);
       }
       .glitch {
         position: relative;
@@ -169,7 +190,7 @@ import { ref } from 'vue'
   }
 }
 .filter-dot::before {
-  background-image: url(../access/images/dot.gif);
+  background-image: url(../access/images/dot.png);
 }
 .headertop::before {
   content: '';
@@ -191,10 +212,13 @@ import { ref } from 'vue'
   #centerbg {
     background-attachment: scroll !important;
   }
+  .centerbg {
+    background-image: url('http://tva1.sinaimg.cn/large/005I8CXily1h4uu2la3qsj30k00sggsx.jpg') !important;
+  }
   .focusinfo {
     .center-text {
-        font-size: 50px !important;
-      }
+      font-size: 58px !important;
+    }
   }
 }
 @-webkit-keyframes glitch-loop-1 {
