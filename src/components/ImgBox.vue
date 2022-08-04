@@ -1,21 +1,22 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-// const skipImgBox = () => {
-//   let height =
-//     window.innerHeight ||
-//     document.documentElement.clientHeight ||
-//     document.body.clientHeight
+const skipImgBox = () => {
+  // let height =
+  //   window.innerHeight ||
+  //   document.documentElement.clientHeight ||
+  //   document.body.clientHeight
 
-//   var timer = setInterval(function () {
-//     let osTop = document.documentElement.scrollTop || document.body.scrollTop
-//     let ispeed = Math.floor(osTop / 10)
-//     document.documentElement.scrollTop = document.body.scrollTop =
-//       osTop + ispeed
-//     if (osTop >= height) {
-//       clearInterval(timer)
-//     }
-//   }, 30)
-// }
+  // var timer = setInterval(function () {
+  //   let osTop = document.documentElement.scrollTop || document.body.scrollTop
+  //   let ispeed = Math.floor(osTop / 10)
+  //   document.documentElement.scrollTop = document.body.scrollTop =
+  //     osTop + ispeed
+  //   if (osTop >= height) {
+  //     clearInterval(timer)
+  //   }
+  // }, 30)
+  document.getElementById('skipImggBoxHook').scrollIntoView({ behavior:'smooth' })
+}
 </script>
 
 <template>
@@ -65,10 +66,12 @@ import { ref } from 'vue'
     </figure>
     <div
       class="absolute bottom-6 left-2/4 text-white text-4xl z-30 animate-bounce cursor-pointer"
+      @click="skipImgBox()"
     >
       <i class="fa-solid fa-angle-down"></i>
     </div>
   </div>
+  <div id="skipImggBoxHook"></div>
 </template>
 
 <style scoped lang="scss">
