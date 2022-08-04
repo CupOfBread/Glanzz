@@ -1,21 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 const skipImgBox = () => {
-  // let height =
-  //   window.innerHeight ||
-  //   document.documentElement.clientHeight ||
-  //   document.body.clientHeight
-
-  // var timer = setInterval(function () {
-  //   let osTop = document.documentElement.scrollTop || document.body.scrollTop
-  //   let ispeed = Math.floor(osTop / 10)
-  //   document.documentElement.scrollTop = document.body.scrollTop =
-  //     osTop + ispeed
-  //   if (osTop >= height) {
-  //     clearInterval(timer)
-  //   }
-  // }, 30)
-  document.getElementById('skipImggBoxHook').scrollIntoView({ behavior:'smooth' })
+  document
+    .getElementById('skipImggBoxHook')
+    ?.scrollIntoView({ behavior: 'smooth' })
 }
 </script>
 
