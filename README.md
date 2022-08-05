@@ -1,4 +1,4 @@
-# Glanzz Frontend✨
+# Glanzz ✨ Frontend
 
 
 ## 简介
@@ -15,9 +15,13 @@ Glanzz项目【前端-前台】
 |vue|3.2.37|Vue3|
 |vue-router|4.1.3|vue-router|
 |vite|3.0.0|vite|
+|tailwindcss|3.1.8|CSS 框架|
+|aplayer|1.10.1|H5音乐播放器|
+|Sakura|-|[WP博客主题](https://github.com/mashirozx/sakura)，UI灵感来源|
 
 
 ## 在线体验
+![preview.jpg](http://tva1.sinaimg.cn/large/005I8CXily1h4wewtuhlqj30zk0oyn3s.jpg)
 演示站点(前台)：https://glanzz.cupbread.cn/
 
 ## 进度

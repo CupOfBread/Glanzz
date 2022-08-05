@@ -1,19 +1,18 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
-onMounted(() => {
-  window.addEventListener('scroll', scrollTop, true)
-})
-const scroll = ref(0)
-const scrollTop = () => {
-  scroll.value = document.documentElement.scrollTop || document.body.scrollTop
-}
+  import { onMounted, ref } from 'vue'
+  onMounted(() => {
+    window.addEventListener('scroll', scrollTop, true)
+  })
+  const scroll = ref(0)
+  const scrollTop = () => {
+    scroll.value = document.documentElement.scrollTop || document.body.scrollTop
+  }
 </script>
 
 <template>
   <div
     class="w-full h-20 fixed top-0 z-50 transition duration-500 bg-white/10 hover:bg-white/90 hover:shadow backdrop-blur-sm justify-between flex"
-    :class="scroll > 70 ? 'bg-white' : ''"
-  >
+    :class="scroll > 70 ? 'bg-white' : ''">
     <div class="brand relative h-20 flex items-center mx-8 text-2xl">
       面包的烘焙坊
     </div>
@@ -23,8 +22,7 @@ const scrollTop = () => {
         <li>
           <a href="" class="transition group"
             ><i
-              class="group-hover:animate-bounce fa-brands fa-fort-awesome mr-2"
-            ></i
+              class="group-hover:animate-bounce fa-brands fa-fort-awesome mr-2"></i
             >按钮1</a
           >
         </li>
@@ -57,10 +55,10 @@ const scrollTop = () => {
 </template>
 
 <style scoped lang="scss">
-.bg-white {
-  background-color: rgba(255, 255, 255, 0.836);
-}
-.brand {
-  text-shadow: 1px 1px #c1c1c1;
-}
+  .bg-white {
+    background-color: rgba(255, 255, 255, 0.836);
+  }
+  .brand {
+    text-shadow: 1px 1px #c1c1c1;
+  }
 </style>
