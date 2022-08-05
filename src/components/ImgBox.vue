@@ -12,7 +12,7 @@ const skipImgBox = () => {
     <figure id="centerbg" class="centerbg">
       <div class="focusinfo no-select">
         <h1
-          class="center-text glitch is-glitching animate__animated animate__rubberBand"
+          class="center-text glitch is-glitching animate__animated animate__rubberBand font-sans"
           data-text="一杯面包"
         >
           一杯面包
@@ -20,7 +20,7 @@ const skipImgBox = () => {
         <div class="header-info animate__animated animate__rubberBand">
           <p>
             <i class="fa fa-quote-left"></i>
-            GET SHIT DONE
+            <span class="font-sans font-semibold"> GET SHIT DONE </span>
             <i class="fa fa-quote-right"></i>
           </p>
           <div class="top-social">
