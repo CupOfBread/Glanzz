@@ -21,16 +21,18 @@ Glanzz项目【前端-前台】
 
 
 ## 在线体验
-![preview.jpg](http://tva1.sinaimg.cn/large/005I8CXily1h4wewtuhlqj30zk0oyn3s.jpg)
+![preview](http://tva1.sinaimg.cn/large/005I8CXily1h50o93iv2xj30zk105gxg.jpg)
 演示站点(前台)：https://glanzz.cupbread.cn/
 
 ## 进度
 - [ ] 首页UI及其组件
 	- [x] 首页大图imgBox组件
-	- [ ] 顶部导航
+	- [x] 顶部导航UI
 	- [ ] 首页列表/文章视图
-	- [ ] 作者信息组件
+	- [x] 作者信息组件UI
 	- [ ] 点击返回顶部
+	- [x] 文章列表适配各个分辨率
+- [x] Footer页脚UI
 - [ ] 分类页面及其组件
 - [ ] 文章页面及其组件
 - [ ] 关于页面及其组件
