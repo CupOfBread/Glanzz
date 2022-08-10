@@ -3,13 +3,14 @@
   import Navigation from '../../components/Navigation.vue'
   import AuthorBox from '../../components/AuthorBox.vue'
   import Title from '../../components/Title.vue'
+  import Category from '../../components/Category.vue'
   import Footer from '../footer/Footer.vue'
 </script>
 
 <template>
   <Navigation></Navigation>
   <ImgBoxVue></ImgBoxVue>
-  
+
   <div
     class="container mx-auto max-w-5xl grid grid-cols-10 gap-8 w-11/12 lg:w-full mt-4 text-gray-600">
     <div class="lg:col-span-7 col-span-10 text-lg">
@@ -23,8 +24,8 @@
             :src="'https://api.ixiaowai.cn/api/api.php?id=1'"
             class="h-full w-full object-cover duration-500 lg:group-hover:scale-115 lg:group-hover:rotate-3" />
         </a>
-        <div class="md:w-2/3 lg:w-9/20 p-5 duration-500" >
-          <div class="text-sm text-gray-500">
+        <div class="md:w-2/3 lg:w-9/20 p-5 duration-500">
+          <div class="text-sm text-gray-400">
             <i class="fa-regular fa-clock mr-1"></i
             ><span class="hidden md:inline-block">发布于</span> 2022-08-05
           </div>
@@ -32,9 +33,7 @@
             >这是文章的标题标题标题标题标题标题标题</a
           >
           <div class="text-sm mb-2 text-gray-500">
-            <span class="mr-5"
-              ><i class="fa-regular fa-eye mr-1"></i>123</span
-            >
+            <span class="mr-5"><i class="fa-regular fa-eye mr-1"></i>123</span>
             <span class="mr-5"
               ><i class="fa-regular fa-comment-dots mr-1"></i>234</span
             >
@@ -61,8 +60,8 @@
             :src="'https://api.ixiaowai.cn/api/api.php?id=2'"
             class="h-full w-full object-cover duration-500 lg:group-hover:scale-115 lg:group-hover:rotate-3" />
         </a>
-        <div class="md:w-2/3 lg:w-9/20 p-5 duration-500" >
-          <div class="text-sm text-gray-500">
+        <div class="md:w-2/3 lg:w-9/20 p-5 duration-500">
+          <div class="text-sm text-gray-400">
             <i class="fa-regular fa-clock mr-1"></i
             ><span class="hidden md:inline-block">发布于</span> 2022-08-05
           </div>
@@ -70,9 +69,7 @@
             >这是文章的标题标题标题标题标题标题标题</a
           >
           <div class="text-sm mb-2 text-gray-500">
-            <span class="mr-5"
-              ><i class="fa-regular fa-eye mr-1"></i>123</span
-            >
+            <span class="mr-5"><i class="fa-regular fa-eye mr-1"></i>123</span>
             <span class="mr-5"
               ><i class="fa-regular fa-comment-dots mr-1"></i>234</span
             >
@@ -90,11 +87,14 @@
           </div>
         </div>
       </div>
-      
+      <a
+        class="rounded-full text-gray-400 border-gray-400 w-40 h-12 border text-center flex items-center justify-center mx-auto hover:border-yellow-500 hover:shadow-yellow-500 hover:shadow-sm mt-20">
+        Load More
+      </a>
     </div>
     <div class="lg:col-span-3 lg:block hidden relative">
-      
       <AuthorBox></AuthorBox>
+      <Category></Category>
     </div>
   </div>
 
@@ -102,6 +102,4 @@
   <Footer></Footer>
 </template>
 
-<style scoped lang="scss">
-  
-</style>
+<style scoped lang="scss"></style>

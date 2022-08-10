@@ -22,18 +22,18 @@ import Title from './Title.vue'
     </div>
     <div class="my-4 text-xl">一杯满满的面包</div>
     <div class="mb-6">手持两把锟斤拷 口里疾呼烫烫烫</div>
-    <div class="grid grid-cols-3 gap-2 px-10 text-center mb-10">
-      <a href="">
+    <div class="grid grid-cols-3 gap-2 px-10 text-center mb-6">
+      <a>
         <div class="text-gray-500">文章</div>
-        <div class="text-xl font-bold">152</div>
+        <div class="text-xl font-bold pb-4">152</div>
       </a>
-      <a href="">
+      <a>
         <div class="text-gray-500">分类</div>
-        <div class="text-xl font-bold">12</div>
+        <div class="text-xl font-bold pb-4">12</div>
       </a>
-      <a href="">
+      <a>
         <div class="text-gray-500">评论</div>
-        <div class="text-xl font-bold">86</div>
+        <div class="text-xl font-bold pb-4">86</div>
       </a>
     </div>
   </div>

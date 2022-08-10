@@ -13,12 +13,12 @@
   <div
     class="w-full h-20 fixed top-0 z-50 transition duration-500 bg-white/10 hover:bg-white/90 hover:shadow backdrop-blur-sm justify-between flex"
     :class="scroll > 70 ? 'bg-white' : ''">
-    <div class="brand relative h-20 flex items-center mx-8 text-2xl">
+    <div class="text-shadow relative h-20 flex items-center mx-8 text-2xl">
       面包的烘焙坊
     </div>
 
     <div class="justify-between mx-8 text-gray-800 flex">
-      <ul class="h-20 mx-8 justify-start space-x-6 items-center hidden md:flex">
+      <ul class="h-20 mx-8 justify-start space-x-6 items-center hidden md:flex text-shadow">
         <li>
           <a href="" class="transition group"
             ><i
@@ -58,7 +58,7 @@
   .bg-white {
     background-color: rgba(255, 255, 255, 0.836);
   }
-  .brand {
-    text-shadow: 1px 1px #c1c1c1;
+  .text-shadow {
+    text-shadow: 0.5px 0.5px #c9c9c9;
   }
 </style>

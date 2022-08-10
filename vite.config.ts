@@ -6,12 +6,13 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     rollupOptions: {
-      external: ['vue','vueRouter','axios'],
+      external: ['vue','vueRouter','axios','vuex'],
       plugins: [
         externalGlobals({
           vue: 'Vue',
           vueRouter: "VueRouter",
           axios: "axios",
+          vuex: "Vuex",
         }),
       ],
     },
