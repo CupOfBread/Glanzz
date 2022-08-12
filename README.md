@@ -17,18 +17,17 @@ Glanzz项目【前端-前台】
 |vite|3.0.0|vite|
 |tailwindcss|3.1.8|CSS 框架|
 |aplayer|1.10.1|H5音乐播放器|
-|Sakura|-|[WP博客主题](https://github.com/mashirozx/sakura)，UI灵感来源|
 
 
 ## 在线体验
-![preview](http://tva1.sinaimg.cn/large/005I8CXily1h50o93iv2xj30zk105gxg.jpg)
+![preview](http://tva1.sinaimg.cn/large/005I8CXily1h54jaz16iwj30sg1d1jz1.jpg)
 演示站点(前台)：https://glanzz.cupbread.cn/
 
 ## 进度
 - [ ] 首页UI及其组件
 	- [x] 首页大图imgBox组件
 	- [x] 顶部导航UI
-	- [ ] 首页列表/文章视图
+	- [x] 首页列表/文章视图
 	- [x] 作者信息组件UI
 	- [ ] 点击返回顶部
 	- [x] 文章列表适配各个分辨率
