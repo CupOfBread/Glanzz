@@ -2,7 +2,7 @@
 
 <template>
   <div
-    class="text-center text-gray-400 pb-8">
+    class="text-center text-gray-400 pb-8 mt-24">
     <div class="text-red-400 animate__animated animate__bounce animate__infinite"><i class="fa-solid fa-heart"></i></div>
     <div class="mb-2 text-sm">
       Crafted with <a class="text-yellow-500">Glanzz</a> by

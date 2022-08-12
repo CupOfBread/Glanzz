@@ -1,5 +1,7 @@
 <script setup lang="ts">
   import { onMounted, ref } from 'vue'
+  import { useStore } from 'vuex'
+  const store = useStore()
   onMounted(() => {
     window.addEventListener('scroll', scrollTop, true)
   })
@@ -7,46 +9,66 @@
   const scrollTop = () => {
     scroll.value = document.documentElement.scrollTop || document.body.scrollTop
   }
+  function showMobileNavigation(flag: boolean) {
+    store.commit('changeMobileNavView', flag)
+  }
 </script>
 
 <template>
   <div
-    class="w-full h-20 fixed top-0 z-50 transition duration-500 bg-white/10 hover:bg-white/90 hover:shadow backdrop-blur-sm justify-between flex"
+    class="z-40 bg-black opacity-60 fixed w-full h-full duration-500"
+    @click="showMobileNavigation(false)"
+    v-if="store.state.showMobileNav"></div>
+  <div
+    class="z-900 fixed h-full w-2/3 bg-red-200 transition duration-500 animate__animated animate__slideInLeft"
+    v-if="store.state.showMobileNav">
+    还在做呢，我知道你很急，但是你先别急！ヾ(≧▽≦*)o
+  </div>
+  <div
+    class="w-full h-20 fixed top-0 z-40 transition duration-500 bg-white/10 lg:hover:bg-white/90 hover:shadow backdrop-blur-sm justify-between flex"
     :class="scroll > 70 ? 'bg-white' : ''">
-    <div class="text-shadow relative h-20 flex items-center mx-8 text-2xl">
+    <div class="text-shadow relative h-20 flex items-center mx-6 text-2xl">
+      <div class="mr-4 md:hidden" @click="showMobileNavigation(true)">
+        <i class="fa-solid fa-align-justify"></i>
+      </div>
       面包的烘焙坊
     </div>
 
     <div class="justify-between mx-8 text-gray-800 flex">
-      <ul class="h-20 mx-8 justify-start space-x-6 items-center hidden md:flex text-shadow">
+      <ul
+        class="h-20 mx-8 justify-start space-x-6 items-center hidden md:flex text-shadow">
         <li>
-          <a href="" class="transition group"
-            ><i
-              class="group-hover:animate-bounce fa-brands fa-fort-awesome mr-2"></i
-            >按钮1</a
-          >
+          <router-link to="/">
+            <a class="transition group"
+              ><i
+                class="group-hover:animate-bounce fa-brands fa-fort-awesome mr-2"></i
+              >首页</a
+            >
+          </router-link>
         </li>
         <li>
-          <a href="" class="transition group"
-            ><i class="group-hover:animate-bounce fa-solid fa-tree mr-2"></i
-            >按钮2</a
-          >
+          <router-link to="/a">
+            <a class="transition group"
+              ><i class="group-hover:animate-bounce fa-solid fa-tree mr-2"></i
+              >文章页示例</a
+            >
+          </router-link>
         </li>
         <li>
-          <a href="" class="transition group"
+          <a class="transition group"
             ><i class="group-hover:animate-bounce fa-solid fa-heart mr-2"></i
             >按钮3</a
           >
         </li>
         <li>
-          <a href="" class="transition group"
+          <a class="transition group"
             ><i class="group-hover:animate-bounce fa-brands fa-envira mr-2"></i
-            >按钮4</a
+            >关于</a
           >
         </li>
       </ul>
       <div class="h-20 flex items-center">
-        <a href="" class="w-6 h-6 text-center">
+        <a class="w-6 h-6 text-center">
           <i class="fa-solid fa-magnifying-glass"></i
         ></a>
       </div>

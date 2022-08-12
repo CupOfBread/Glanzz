@@ -1,17 +1,16 @@
 <script setup lang="ts">
   import ImgBoxVue from '../../components/ImgBox.vue'
-  import Navigation from '../../components/Navigation.vue'
   import AuthorBox from '../../components/AuthorBox.vue'
   import Title from '../../components/Title.vue'
   import Category from '../../components/Category.vue'
   import SiteInfo from '../../components/SiteInfo.vue'
+  import Navigation from '../../components/Navigation.vue'
   import Footer from '../footer/Footer.vue'
 </script>
 
 <template>
   <Navigation></Navigation>
   <ImgBoxVue></ImgBoxVue>
-
   <div
     class="container mx-auto max-w-5xl grid grid-cols-10 gap-8 w-11/12 lg:w-full mt-4 text-gray-600">
     <div class="lg:col-span-7 col-span-10 text-lg">
@@ -30,9 +29,13 @@
             <i class="fa-regular fa-clock mr-1"></i
             ><span class="hidden md:inline-block">发布于</span> 2022-08-05
           </div>
-          <a href="" class="block my-2 line-clamp-2 text-black md:font-normal font-medium"
-            >这是文章的标题标题标题标题标题标题标题</a
-          >
+          <router-link to="/a">
+            <a
+              href=""
+              class="block my-2 line-clamp-2 text-black md:font-normal font-medium"
+              >这是文章的标题标题标题标题标题标题标题</a
+            >
+          </router-link>
           <div class="text-sm mb-2 text-gray-500">
             <span class="mr-5"><i class="fa-regular fa-eye mr-1"></i>123</span>
             <span class="mr-5"
@@ -66,7 +69,9 @@
             <i class="fa-regular fa-clock mr-1"></i
             ><span class="hidden md:inline-block">发布于</span> 2022-08-05
           </div>
-          <a href="" class="block my-2 line-clamp-2 text-black md:font-normal font-medium"
+          <a
+            href=""
+            class="block my-2 line-clamp-2 text-black md:font-normal font-medium"
             >这是文章的标题标题标题标题标题标题标题</a
           >
           <div class="text-sm mb-2 text-gray-500">

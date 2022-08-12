@@ -203,7 +203,7 @@
       background-attachment: scroll !important;
     }
     .centerbg {
-      background-image: url('http://tva1.sinaimg.cn/large/005I8CXily1h4uu2la3qsj30k00sggsx.jpg') !important;
+      background-image: url('https://api.sdgou.cc/api/sjbz/?lx=dongman&method=mobile') !important;
     }
     .focusinfo {
       .center-text {

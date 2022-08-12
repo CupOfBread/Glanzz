@@ -1,20 +1,16 @@
-import { useStore } from 'vuex'
 import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    info:'Glanzz'
+    info: 'Glanzz',
+    showMobileNav: false,
   },
   mutations: {
-
+    changeMobileNavView(state, show) {
+      state.showMobileNav = show
+    },
   },
-  actions: {
-
-  },
-  getters:{
-
-  },
-  modules:{
-
-  }
+  actions: {},
+  getters: {},
+  modules: {},
 })
