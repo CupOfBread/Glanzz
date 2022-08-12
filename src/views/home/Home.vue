@@ -4,6 +4,7 @@
   import AuthorBox from '../../components/AuthorBox.vue'
   import Title from '../../components/Title.vue'
   import Category from '../../components/Category.vue'
+  import SiteInfo from '../../components/SiteInfo.vue'
   import Footer from '../footer/Footer.vue'
 </script>
 
@@ -29,7 +30,7 @@
             <i class="fa-regular fa-clock mr-1"></i
             ><span class="hidden md:inline-block">发布于</span> 2022-08-05
           </div>
-          <a href="" class="block my-2 line-clamp-2 text-black"
+          <a href="" class="block my-2 line-clamp-2 text-black md:font-normal font-medium"
             >这是文章的标题标题标题标题标题标题标题</a
           >
           <div class="text-sm mb-2 text-gray-500">
@@ -65,7 +66,7 @@
             <i class="fa-regular fa-clock mr-1"></i
             ><span class="hidden md:inline-block">发布于</span> 2022-08-05
           </div>
-          <a href="" class="block my-2 line-clamp-2 text-black"
+          <a href="" class="block my-2 line-clamp-2 text-black md:font-normal font-medium"
             >这是文章的标题标题标题标题标题标题标题</a
           >
           <div class="text-sm mb-2 text-gray-500">
@@ -95,6 +96,7 @@
     <div class="lg:col-span-3 lg:block hidden relative">
       <AuthorBox></AuthorBox>
       <Category></Category>
+      <SiteInfo></SiteInfo>
     </div>
   </div>
 

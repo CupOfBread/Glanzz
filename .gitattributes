@@ -1,3 +1,4 @@
 *.css linguist-language=Vue
 *.ts linguist-language=Vue
 *.js linguist-language=Vue
+*.cjs linguist-language=Vue
