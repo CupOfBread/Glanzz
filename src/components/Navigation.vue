@@ -1,7 +1,9 @@
 <script setup lang="ts">
   import { onMounted, ref } from 'vue'
   import { useStore } from 'vuex'
+  import { useRouter } from 'vue-router'
   const store = useStore()
+  const route = useRouter()
   onMounted(() => {
     window.addEventListener('scroll', scrollTop, true)
   })
@@ -12,17 +14,60 @@
   function showMobileNavigation(flag: boolean) {
     store.commit('changeMobileNavView', flag)
   }
+  function navigateTo(path: string) {
+    showMobileNavigation(false)
+    route.push({
+      path: path,
+    })
+  }
 </script>
 
 <template>
   <div
     class="z-40 bg-black opacity-60 fixed w-full h-full duration-500"
     @click="showMobileNavigation(false)"
-    v-if="store.state.showMobileNav"></div>
+    v-show="store.state.showMobileNav"></div>
   <div
-    class="z-900 fixed h-full w-2/3 bg-red-200 transition duration-500 animate__animated animate__slideInLeft"
-    v-if="store.state.showMobileNav">
-    还在做呢，我知道你很急，但是你先别急！ヾ(≧▽≦*)o
+    class="z-900 fixed h-full w-2/3 bg-slate-50 duration-500 animate__animated animate__slideInLeft p-9 overflow-x-hidden overflow-y-scroll"
+    v-show="store.state.showMobileNav">
+    <div
+      class="absolute top-2 -right-14 text-4xl text-white w-10"
+      @click="showMobileNavigation(false)">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="rounded-full overflow-hidden w-20 h-20 mx-auto shadow-lg my-4">
+      <img
+        class="w-full h-full hover:rotate-360 duration-700 object-cover object-center"
+        :src="'https://api.sdgou.cc/api/sjtx/?lx=c1'" />
+    </div>
+    <div class="text-center mb-4 text-lg">一杯满满的面包</div>
+    <div class="text-center mb-4 text-xs text-gray-500">
+      手持两把锟斤拷<br />口里疾呼烫烫烫
+    </div>
+
+    <ul class="text-left pl-8 text-gray-800">
+      <li class="mb-4" @click="navigateTo('/')">
+        <i class="fa-brands fa-fort-awesome mr-2"></i>首页
+      </li>
+      <li class="mb-4" @click="navigateTo('/a')">
+        <i class="fa-solid fa-tree mr-2"></i>文章页示例
+      </li>
+      <li class="mb-4"><i class="fa-solid fa-heart mr-2"></i>按钮3</li>
+      <li class="mb-4"><i class="fa-brands fa-envira mr-2"></i>关于</li>
+    </ul>
+
+    <div>还没做完呢，我知道你很急，但是你先别急！<br />ヾ(≧▽≦*)o</div>
+    <div class="text-center text-gray-400 pb-8 mt-24 text-xs">
+      <div
+        class="text-red-400 animate__animated animate__bounce animate__infinite">
+        <i class="fa-solid fa-heart"></i>
+      </div>
+      <div class="">
+        <i class="fa-regular fa-copyright mr-2"></i>
+        <span class="mr-2">2021-2022</span>
+        <span class="mr-2 block lg:inline-block">面包的烘焙坊</span>
+      </div>
+    </div>
   </div>
   <div
     class="w-full h-20 fixed top-0 z-40 transition duration-500 bg-white/10 lg:hover:bg-white/90 hover:shadow backdrop-blur-sm justify-between flex"

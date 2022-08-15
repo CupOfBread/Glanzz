@@ -19,7 +19,7 @@
         class="rounded-xl md:h-56 shadow-lg hover:shadow-xl overflow-hidden article-item group md:flex justify-between mb-9 lg:hover:scale-102 duration-500">
         <a
           href=""
-          class="block h-44 md:h-56 md:w-1/3 lg:w-11/20 bg-center bg-no-repeat overflow-hidden">
+          class="block h-44 md:h-56 md:w-1/3 lg:w-11/20 overflow-hidden">
           <img
             :src="'https://api.ixiaowai.cn/api/api.php?id=1'"
             class="h-full w-full object-cover duration-500 lg:group-hover:scale-115 lg:group-hover:rotate-3" />
@@ -33,7 +33,10 @@
             <a
               href=""
               class="block my-2 line-clamp-2 text-black md:font-normal font-medium"
-              >这是文章的标题标题标题标题标题标题标题</a
+              ><span
+                class="border border-red-600 text-red-600 px-2 text-sm rounded-xl inline-block mr-1"
+                >置顶</span
+              >11这是文章的标题标题标题标题标题标题标题111</a
             >
           </router-link>
           <div class="text-sm mb-2 text-gray-500">
@@ -104,8 +107,6 @@
       <SiteInfo></SiteInfo>
     </div>
   </div>
-
-  <div style="height: 200px"></div>
   <Footer></Footer>
 </template>
 
