@@ -28,13 +28,15 @@
     @click="showMobileNavigation(false)"
     v-show="store.state.showMobileNav"></div>
   <div
-    class="z-900 fixed h-full w-2/3 bg-slate-50 duration-500 animate__animated animate__slideInLeft p-9 overflow-x-hidden overflow-y-scroll"
+    class="absolute top-2 left-close-mnav text-4xl text-white w-10 z-900 animate__animated animate__backInLeft"
+    v-show="store.state.showMobileNav"
+    @click="showMobileNavigation(false)"
+    >
+    <i class="fa-solid fa-xmark"></i>
+  </div>
+  <div
+    class="z-900 fixed h-full w-2/3 bg-slate-50 duration-500 animate__animated animate__slideInLeft p-9 overflow-x-hidden overflow-y-auto"
     v-show="store.state.showMobileNav">
-    <div
-      class="absolute top-2 -right-14 text-4xl text-white w-10"
-      @click="showMobileNavigation(false)">
-      <i class="fa-solid fa-xmark"></i>
-    </div>
     <div class="rounded-full overflow-hidden w-20 h-20 mx-auto shadow-lg my-4">
       <img
         class="w-full h-full hover:rotate-360 duration-700 object-cover object-center"
@@ -63,9 +65,9 @@
         <i class="fa-solid fa-heart"></i>
       </div>
       <div class="">
-        <i class="fa-regular fa-copyright mr-2"></i>
-        <span class="mr-2">2021-2022</span>
-        <span class="mr-2 block lg:inline-block">面包的烘焙坊</span>
+        <i class="fa-regular fa-copyright"></i>
+        <span class="">2021-2022</span>
+        <span class="block lg:inline-block">面包的烘焙坊</span>
       </div>
     </div>
   </div>

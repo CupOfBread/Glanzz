@@ -22,6 +22,9 @@ body {
   cursor: url(https://cdn.jsdelivr.net/gh/xiabo2/vieu@master/S1.cur), default;
 }
 
+div::-webkit-scrollbar {
+  width: 0;
+}
 /* 滚动条样式 */
 ::-webkit-scrollbar {
   width: 12px;
