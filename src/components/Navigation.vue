@@ -1,9 +1,10 @@
 <script setup lang="ts">
-  import { onMounted, ref } from 'vue'
+  import { onMounted, ref, computed } from 'vue'
   import { useStore } from 'vuex'
   import { useRouter } from 'vue-router'
   const store = useStore()
   const route = useRouter()
+
   onMounted(() => {
     window.addEventListener('scroll', scrollTop, true)
   })
@@ -30,8 +31,7 @@
   <div
     class="absolute top-2 left-close-mnav text-4xl text-white w-10 z-900 animate__animated animate__backInLeft"
     v-show="store.state.showMobileNav"
-    @click="showMobileNavigation(false)"
-    >
+    @click="showMobileNavigation(false)">
     <i class="fa-solid fa-xmark"></i>
   </div>
   <div
@@ -42,20 +42,19 @@
         class="w-full h-full hover:rotate-360 duration-700 object-cover object-center"
         :src="'https://api.sdgou.cc/api/sjtx/?lx=c1'" />
     </div>
-    <div class="text-center mb-4 text-lg">一杯满满的面包</div>
+    <div class="text-center mb-4 text-lg">{{store.state.authorInfo.AuthorInfo.name}}</div>
     <div class="text-center mb-4 text-xs text-gray-500">
-      手持两把锟斤拷<br />口里疾呼烫烫烫
+      {{store.state.authorInfo.AuthorInfo.saying}}
     </div>
 
     <ul class="text-left pl-8 text-gray-800">
-      <li class="mb-4" @click="navigateTo('/')">
-        <i class="fa-brands fa-fort-awesome mr-2"></i>首页
+      <li
+        class="mb-4"
+        v-for="(item, index) in store.state.nav.nav"
+        :key="index"
+        @click="navigateTo(item.path)">
+        <i class="mr-2" :class="item.icon"></i>{{ item.name }}
       </li>
-      <li class="mb-4" @click="navigateTo('/a')">
-        <i class="fa-solid fa-tree mr-2"></i>文章页示例
-      </li>
-      <li class="mb-4"><i class="fa-solid fa-heart mr-2"></i>按钮3</li>
-      <li class="mb-4"><i class="fa-brands fa-envira mr-2"></i>关于</li>
     </ul>
 
     <div>还没做完呢，我知道你很急，但是你先别急！<br />ヾ(≧▽≦*)o</div>
@@ -65,9 +64,13 @@
         <i class="fa-solid fa-heart"></i>
       </div>
       <div class="">
-        <i class="fa-regular fa-copyright"></i>
-        <span class="">2021-2022</span>
-        <span class="block lg:inline-block">面包的烘焙坊</span>
+        <i class="fa-regular fa-copyright mr-1"></i>
+        <span class=""
+          >{{ store.state.siteInfo.SiteInfo.startYear }} - 2022</span
+        >
+        <span class="block lg:inline-block">{{
+          store.state.siteInfo.SiteInfo.title
+        }}</span>
       </div>
     </div>
   </div>
@@ -78,39 +81,19 @@
       <div class="mr-4 md:hidden" @click="showMobileNavigation(true)">
         <i class="fa-solid fa-align-justify"></i>
       </div>
-      面包的烘焙坊
+      {{ store.state.siteInfo.SiteInfo.title }}
     </div>
 
     <div class="justify-between mx-8 text-gray-800 flex">
       <ul
         class="h-20 mx-8 justify-start space-x-6 items-center hidden md:flex text-shadow">
-        <li>
-          <router-link to="/">
-            <a class="transition group"
-              ><i
-                class="group-hover:animate-bounce fa-brands fa-fort-awesome mr-2"></i
-              >首页</a
-            >
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/a">
-            <a class="transition group"
-              ><i class="group-hover:animate-bounce fa-solid fa-tree mr-2"></i
-              >文章页示例</a
-            >
-          </router-link>
-        </li>
-        <li>
+        <li
+          v-for="(item, index) in store.state.nav.nav"
+          :key="index"
+          @click="navigateTo(item.path)">
           <a class="transition group"
-            ><i class="group-hover:animate-bounce fa-solid fa-heart mr-2"></i
-            >按钮3</a
-          >
-        </li>
-        <li>
-          <a class="transition group"
-            ><i class="group-hover:animate-bounce fa-brands fa-envira mr-2"></i
-            >关于</a
+            ><i class="group-hover:animate-bounce mr-2" :class="item.icon"></i
+            >{{ item.name }}</a
           >
         </li>
       </ul>

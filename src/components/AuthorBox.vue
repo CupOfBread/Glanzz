@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import Title from './Title.vue'
+  import Title from './Title.vue'
+  import { useStore } from 'vuex'
+  const store = useStore()
 </script>
 
 <template>
-<Title content="本站作者"></Title>
+  <Title content="本站作者"></Title>
   <div
     class="rounded-xl shadow-lg hover:shadow-xl duration-500 overflow-hidden group text-center relative">
     <div class="absolute -z-50 w-full h-full transform rotate-45 top-0">
@@ -20,8 +22,8 @@ import Title from './Title.vue'
         class="w-full h-full hover:rotate-360 duration-700"
         :src="'https://api.sdgou.cc/api/sjtx/?lx=c1'" />
     </div>
-    <div class="my-4 text-xl">一杯满满的面包</div>
-    <div class="mb-6">手持两把锟斤拷 口里疾呼烫烫烫</div>
+    <div class="my-4 text-xl">{{ store.state.authorInfo.AuthorInfo.name }}</div>
+    <div class="mb-6">{{ store.state.authorInfo.AuthorInfo.saying }}</div>
     <div class="grid grid-cols-3 gap-2 px-10 text-center mb-6">
       <a>
         <div class="text-gray-500">文章</div>
@@ -40,7 +42,7 @@ import Title from './Title.vue'
 </template>
 
 <style scoped lang="scss">
-.shooting_star {
+  .shooting_star {
     position: absolute;
     top: 0;
     left: 0;
