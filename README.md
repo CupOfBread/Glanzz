@@ -15,6 +15,7 @@ Glanzz项目【前端-前台】
 |vue|3.2.37|Vue3|
 |vue-router|4.1.3|vue-router|
 |vite|3.0.0|vite|
+|pinia|2.0.18|pinia|
 |tailwindcss|3.1.8|CSS 框架|
 |aplayer|1.10.1|H5音乐播放器|
 

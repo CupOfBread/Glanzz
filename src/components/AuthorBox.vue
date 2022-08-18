@@ -1,7 +1,8 @@
 <script setup lang="ts">
   import Title from './Title.vue'
-  import { useStore } from 'vuex'
-  const store = useStore()
+  import { useStore } from '../store'
+  import { storeToRefs } from 'pinia'
+  const { AuthorInfo } = storeToRefs(useStore())
 </script>
 
 <template>
@@ -22,8 +23,8 @@
         class="w-full h-full hover:rotate-360 duration-700"
         :src="'https://api.sdgou.cc/api/sjtx/?lx=c1'" />
     </div>
-    <div class="my-4 text-xl">{{ store.state.authorInfo.AuthorInfo.name }}</div>
-    <div class="mb-6">{{ store.state.authorInfo.AuthorInfo.saying }}</div>
+    <div class="my-4 text-xl">{{ AuthorInfo.AuthorInfo.name }}</div>
+    <div class="mb-6">{{ AuthorInfo.AuthorInfo.saying }}</div>
     <div class="grid grid-cols-3 gap-2 px-10 text-center mb-6">
       <a>
         <div class="text-gray-500">文章</div>

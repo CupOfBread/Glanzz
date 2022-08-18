@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import { useRouter } from 'vue-router'
   import ImgBoxVue from '../../components/ImgBox.vue'
   import AuthorBox from '../../components/AuthorBox.vue'
   import Title from '../../components/Title.vue'
@@ -6,6 +7,13 @@
   import SiteInfo from '../../components/SiteInfo.vue'
   import Navigation from '../../components/Navigation.vue'
   import Footer from '../footer/Footer.vue'
+
+  const route = useRouter()
+  function navigateTo(path: string) {
+    route.push({
+      path: path,
+    })
+  }
 </script>
 
 <template>
@@ -18,7 +26,7 @@
       <div
         class="rounded-xl md:h-56 shadow-lg hover:shadow-xl overflow-hidden article-item group md:flex justify-between mb-9 lg:hover:scale-102 duration-500">
         <a
-          href=""
+          @click="navigateTo('/a')"
           class="block h-44 md:h-56 md:w-1/3 lg:w-11/20 overflow-hidden">
           <img
             :src="'https://api.ixiaowai.cn/api/api.php?id=1'"
@@ -29,16 +37,14 @@
             <i class="fa-regular fa-clock mr-1"></i
             ><span class="hidden md:inline-block">发布于</span> 2022-08-05
           </div>
-          <router-link to="/a">
-            <a
-              href=""
-              class="block my-2 line-clamp-2 text-black md:font-normal font-medium"
-              ><span
-                class="border border-red-600 text-red-600 px-2 text-sm rounded-xl inline-block mr-1"
-                >置顶</span
-              >11这是文章的标题标题标题标题标题标题标题111</a
-            >
-          </router-link>
+          <a
+            @click="navigateTo('/a')"
+            class="block my-2 line-clamp-2 text-black md:font-normal font-medium"
+            ><span
+              class="border border-red-600 text-red-600 px-2 text-sm rounded-xl inline-block mr-1"
+              >置顶</span
+            >11这是文章的标题标题标题标题标题标题标题111</a
+          >
           <div class="text-sm mb-2 text-gray-500">
             <span class="mr-5"><i class="fa-regular fa-eye mr-1"></i>123</span>
             <span class="mr-5"
@@ -48,7 +54,7 @@
               ><i class="fa-regular fa-folder-closed mr-1"></i>345</span
             >
           </div>
-          <a href="" class="line-clamp-2 text-sm mb-2">
+          <a class="line-clamp-2 text-sm mb-2" @click="navigateTo('/a')">
             这里是文章详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情
           </a>
           <div class="text-right text-yellow-400 mt-3 hidden md:block">
@@ -61,7 +67,6 @@
       <div
         class="rounded-xl md:h-56 shadow-lg hover:shadow-xl overflow-hidden article-item group md:flex justify-between mb-9 lg:hover:scale-102 duration-500">
         <a
-          href=""
           class="block h-44 md:h-56 md:w-1/3 lg:w-11/20 bg-center bg-no-repeat overflow-hidden lg:order-last">
           <img
             :src="'https://api.ixiaowai.cn/api/api.php?id=2'"
@@ -73,7 +78,6 @@
             ><span class="hidden md:inline-block">发布于</span> 2022-08-05
           </div>
           <a
-            href=""
             class="block my-2 line-clamp-2 text-black md:font-normal font-medium"
             >这是文章的标题标题标题标题标题标题标题</a
           >
@@ -86,7 +90,7 @@
               ><i class="fa-regular fa-folder-closed mr-1"></i>345</span
             >
           </div>
-          <a href="" class="line-clamp-2 text-sm mb-2">
+          <a class="line-clamp-2 text-sm mb-2">
             这里是文章详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情详情
           </a>
           <div class="text-right text-yellow-400 mt-3 hidden md:block">

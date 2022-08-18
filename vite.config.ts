@@ -9,13 +9,14 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ['vue', 'vueRouter', 'axios', 'vuex'],
+      external: ['vue', 'vueRouter', 'axios', 'vue-demi', 'pinia'],
       plugins: [
         externalGlobals({
           vue: 'Vue',
           vueRouter: 'VueRouter',
-          axios: 'axios',
-          vuex: 'Vuex',
+          axios: 'Axios',
+          'vue-demi': 'VueDemi',
+          pinia: 'Pinia',
         }),
       ],
     },

@@ -1,8 +1,5 @@
 <script setup lang="ts">
   import { ref } from 'vue'
-  import { useStore } from 'vuex'
-  const store = useStore()
-
   const skipImgBox = () => {
     document
       .getElementById('skipImggBoxHook')
@@ -16,13 +13,13 @@
       <div class="focusinfo no-select">
         <h1
           class="center-text glitch is-glitching animate__animated animate__rubberBand font-sans"
-          :data-text="store.state.siteInfo.SiteInfo.centerTitle">
-          {{ store.state.siteInfo.SiteInfo.centerTitle }}
+          data-text="一杯面包">
+          一杯面包
         </h1>
         <div class="header-info animate__animated animate__rubberBand">
           <p>
             <i class="fa fa-quote-left"></i>
-            <span class="font-sans font-semibold"> {{ store.state.siteInfo.SiteInfo.saying }} </span>
+            <span class="font-sans font-semibold"> GET SHIT DONE </span>
             <i class="fa fa-quote-right"></i>
           </p>
           <div class="top-social">
