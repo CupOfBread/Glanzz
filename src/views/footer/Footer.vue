@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import { useStore } from '../../store'
+  import { storeToRefs } from 'pinia'
+  const { SiteInfo } = storeToRefs(useStore())
+</script>
 
 <template>
   <div class="text-center text-gray-400 pb-8 mt-24">
@@ -13,8 +17,12 @@
     <div class="w-1/2 mx-auto">
       <i class="fa-regular fa-copyright mr-2"></i>
       <span class="mr-2">2021-2022</span>
-      <span class="mr-2 block lg:inline-block">面包的烘焙坊</span>
-      <span class="mr-2 block lg:inline-block">浙ICP备xxxxxx号</span>
+      <span class="mr-2 block lg:inline-block">{{
+        SiteInfo.SiteInfo.title
+      }}</span>
+      <span class="mr-2 block lg:inline-block">{{
+        SiteInfo.SiteInfo.icp
+      }}</span>
     </div>
   </div>
 </template>

@@ -21,21 +21,22 @@ Glanzz项目【前端-前台】
 
 
 ## 在线体验
-![preview](http://tva1.sinaimg.cn/large/005I8CXily1h54jaz16iwj30sg1d1jz1.jpg)
+|   首页   |    手机端    |    手机端    |
+| ---------- | ---------- | ---------- |
+| ![preview](http://tva1.sinaimg.cn/large/005I8CXily1h54jaz16iwj30sg1d1jz1.jpg) | ![phone1.png](http://tva1.sinaimg.cn/large/005I8CXily1h5c4acj3bij30fn1tre81.jpg) | ![phone2.png](http://tva1.sinaimg.cn/large/005I8CXily1h5c46epe2nj30fn0twn53.jpg) |
+
 演示站点(前台)：https://glanzz.cupbread.cn/
 
-## 进度
-- [ ] 首页UI及其组件
-	- [x] 首页大图imgBox组件
-	- [x] 顶部导航UI
-	- [x] 首页列表/文章视图
-	- [x] 作者信息组件UI
-	- [ ] 点击返回顶部
-	- [x] 文章列表适配各个分辨率
-- [x] Footer页脚UI
-- [ ] 分类页面及其组件
-- [ ] 文章页面及其组件
-- [ ] 关于页面及其组件
+## 进度&规划
+- [ ] 基础页面架构与依赖集成
+	- [x] pinia集成
+	- [x] 各个页面构架
+	- [x] 手机端同步适配
+	- [ ] 封装组件
+- [ ] 友链页面UI
+- [ ] 分类文章列表页面UI
+- [ ] 文章详情页面UI
+- [ ] 收集图片，自建随机图片接口
 
 
 ## 快速开始

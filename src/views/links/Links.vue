@@ -3,13 +3,14 @@
   import Navigation from '../../components/Navigation.vue'
   import Footer from '../footer/Footer.vue'
 </script>
+
 <template>
   <Navigation></Navigation>
   <ImgBoxTitle
-    title="这是分类的标题"
+    title="友人帐"
     type="common"
-    description="没错，这就是很长很长很长的的的的描述"></ImgBoxTitle>
+    description="这里是友人帐"></ImgBoxTitle>
   <Footer></Footer>
 </template>
 
-<style lang="scss" scoped></style>
+<style scoped lang="scss"></style>

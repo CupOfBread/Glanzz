@@ -19,6 +19,11 @@ const nav = [
     icon: 'fa-solid fa-carrot',
     path: '/about',
   },
+  {
+    name: '友人帐',
+    icon: 'fa-solid fa-link',
+    path: '/links',
+  },
 ]
 
 export default {

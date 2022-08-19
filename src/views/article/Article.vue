@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import ImgBoxTitle from '../../components/ImgBoxTitle.vue'
   import Navigation from '../../components/Navigation.vue'
+  import Footer from '../footer/Footer.vue'
 </script>
 
 <template>
@@ -21,6 +22,7 @@
       </div>
     </div>
   </div>
+  <Footer></Footer>
 </template>
 
 <style scoped lang="scss"></style>

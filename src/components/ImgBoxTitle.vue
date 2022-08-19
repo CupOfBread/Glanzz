@@ -2,7 +2,7 @@
   const props = defineProps({
     type: {
       type: String,
-      default: 'category',
+      default: 'common',
     },
     description: {
       type: String,
@@ -16,7 +16,7 @@
       type: String,
       default: '一杯空空的面包',
     },
-    category: {
+    common: {
       type: String,
       default: '文学',
     },
@@ -31,7 +31,7 @@
   <div class="relative animate__animated animate__pulse">
     <div class="headertop w-full h-60 md:h-80 lg:h-articleImg -z-10">
       <img
-        src="https://api.sdgou.cc/api/sjbz/?lx=dongman"
+        :src="'https://api.sdgou.cc/api/sjbz/?lx=dongman&c=' + Math.random()"
         class="object-cover object-top h-full w-full brightness-65" />
     </div>
     <div
@@ -49,7 +49,7 @@
               ><i class="fa-solid fa-user-pen mr-2"></i>{{ author }}</span
             >
             <span class="mr-4"
-              ><i class="fa-solid fa-leaf mr-2"></i>{{ category }}</span
+              ><i class="fa-solid fa-leaf mr-2"></i>{{ common }}</span
             >
           </div>
           <div class="mt-2" v-if="type == 'article'">
@@ -61,7 +61,7 @@
               ><i class="fa-solid fa-pen-nib mr-2"></i>1.2千字</span
             >
           </div>
-          <div class="mt-2" v-if="type == 'category'">{{ description }}</div>
+          <div class="mt-2" v-if="type == 'common'">{{ description }}</div>
         </div>
       </div>
     </div>
