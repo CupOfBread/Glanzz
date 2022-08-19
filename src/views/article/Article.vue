@@ -1,11 +1,11 @@
 <script setup lang="ts">
-  import ImgBoxVue from '../../components/ImgBoxArticle.vue'
+  import ImgBoxTitle from '../../components/ImgBoxTitle.vue'
   import Navigation from '../../components/Navigation.vue'
 </script>
 
 <template>
   <Navigation></Navigation>
-  <ImgBoxVue></ImgBoxVue>
+  <ImgBoxTitle title="这是文章标题" type="article"></ImgBoxTitle>
   <div
     class="container mx-auto max-w-5xl grid grid-cols-10 gap-4 w-11/12 lg:w-full mt-4 text-gray-600">
     <div class="lg:col-span-8 col-span-10 text-lg">
