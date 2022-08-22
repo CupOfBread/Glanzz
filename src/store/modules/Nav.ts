@@ -15,14 +15,14 @@ const nav = [
     path: '/c',
   },
   {
-    name: '关于',
-    icon: 'fa-solid fa-carrot',
-    path: '/about',
-  },
-  {
     name: '友人帐',
     icon: 'fa-solid fa-link',
     path: '/links',
+  },
+  {
+    name: '关于',
+    icon: 'fa-solid fa-carrot',
+    path: '/about',
   },
 ]
 

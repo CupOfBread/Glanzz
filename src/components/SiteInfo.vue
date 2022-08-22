@@ -1,5 +1,9 @@
 <script setup lang="ts">
   import Title from './Title.vue'
+  import { useStore } from '../store'
+  import { storeToRefs } from 'pinia'
+  const store = useStore()
+  const { SiteInfo } = storeToRefs(store)
 </script>
 
 <template>

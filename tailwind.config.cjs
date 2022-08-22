@@ -3,6 +3,10 @@ module.exports = {
   content: ['./public/**/*.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
   theme: {
     extend: {
+      cursor: {
+        pointer:
+          'url(https://cdn.jsdelivr.net/gh/xiabo2/vieu@master/S2.cur),pointer',
+      },
       width: {
         '11/20': '55%',
         '9/20': '45%'
