@@ -9,7 +9,15 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ['vue', 'vueRouter', 'axios', 'vue-demi', 'pinia'],
+      external: [
+        'vue',
+        'vueRouter',
+        'axios',
+        'vue-demi',
+        'pinia',
+        'marked',
+        'highlight.js',
+      ],
       plugins: [
         externalGlobals({
           vue: 'Vue',
@@ -17,6 +25,8 @@ export default defineConfig({
           axios: 'Axios',
           'vue-demi': 'VueDemi',
           pinia: 'Pinia',
+          marked: 'marked',
+          'highlight.js': 'hljs',
         }),
       ],
     },

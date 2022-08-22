@@ -1,5 +1,12 @@
 <script setup lang="ts">
   import Title from './Title.vue'
+  import { useRouter } from 'vue-router'
+  const route = useRouter()
+  function navigateTo(path: string) {
+    route.push({
+      path: path,
+    })
+  }
 </script>
 
 <template>
