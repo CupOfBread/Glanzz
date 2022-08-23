@@ -49,7 +49,7 @@
           >
         </div>
         <hr class="my-5" />
-        <div class="grid grid-cols-2">
+        <div class="grid md:grid-cols-2">
           <div class="overflow-hidden h-36 relative group cursor-pointer">
             <img
               :src="

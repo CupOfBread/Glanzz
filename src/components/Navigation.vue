@@ -86,7 +86,7 @@
     </div>
   </div>
   <div
-    class="w-full h-20 fixed top-0 z-900 transition duration-500 bg-white/10 lg:hover:bg-white/90 hover:shadow backdrop-blur-sm justify-between flex"
+    class="w-full h-20 fixed top-0 z-50 transition duration-500 bg-white/10 lg:hover:bg-white/90 hover:shadow backdrop-blur-sm justify-between flex"
     :class="scroll > 70 ? 'bg-white' : ''">
     <div class="text-shadow relative h-20 flex items-center mx-6 text-2xl">
       <div class="mr-4 md:hidden" @click="showMobileNavigation(true)">
