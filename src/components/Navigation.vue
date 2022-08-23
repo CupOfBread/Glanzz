@@ -26,6 +26,16 @@
       path: path,
     })
   }
+  function backToTop() {
+    let time = setInterval(() => {
+      if (scroll.value <= 0) {
+        clearInterval(time)
+      } else {
+        scroll.value = scroll.value - 50
+        document.documentElement.scrollTop = scroll.value // 让滚动盒子的高度= 0
+      }
+    }, 10)
+  }
 </script>
 
 <template>
@@ -76,7 +86,7 @@
     </div>
   </div>
   <div
-    class="w-full h-20 fixed top-0 z-40 transition duration-500 bg-white/10 lg:hover:bg-white/90 hover:shadow backdrop-blur-sm justify-between flex"
+    class="w-full h-20 fixed top-0 z-900 transition duration-500 bg-white/10 lg:hover:bg-white/90 hover:shadow backdrop-blur-sm justify-between flex"
     :class="scroll > 70 ? 'bg-white' : ''">
     <div class="text-shadow relative h-20 flex items-center mx-6 text-2xl">
       <div class="mr-4 md:hidden" @click="showMobileNavigation(true)">
@@ -85,7 +95,7 @@
       {{ SiteInfo.SiteInfo.title }}
     </div>
 
-    <div class="justify-between mx-8 text-gray-800 flex">
+    <div class="justify-between mx-8 text-gray-800">
       <ul
         class="h-20 mx-8 justify-start space-x-6 items-center hidden md:flex text-shadow">
         <li
@@ -104,6 +114,12 @@
         ></a>
       </div>
     </div>
+  </div>
+  <div
+    class="fixed -top-36 right-12 z-20 hidden animate__animated animate__bounceInDown cursor-pointer"
+    :class="scroll > 200 ? 'md:block' : 'animate__bounceOutUp'"
+    @click="backToTop()">
+    <img src="../access/images/scroll.png" />
   </div>
 </template>
 
