@@ -95,7 +95,7 @@
       {{ SiteInfo.SiteInfo.title }}
     </div>
 
-    <div class="justify-between mx-8 text-gray-800">
+    <div class="justify-between mx-8 text-gray-800 flex">
       <ul
         class="h-20 mx-8 justify-start space-x-6 items-center hidden md:flex text-shadow">
         <li
@@ -117,7 +117,7 @@
   </div>
   <div
     class="fixed -top-36 right-12 z-20 hidden animate__animated animate__bounceInDown cursor-pointer"
-    :class="scroll > 200 ? 'md:block' : 'animate__bounceOutUp'"
+    :class="scroll > 200 ? 'md:block' : 'md:block animate__bounceOutUp'"
     @click="backToTop()">
     <img src="../access/images/scroll.png" />
   </div>
