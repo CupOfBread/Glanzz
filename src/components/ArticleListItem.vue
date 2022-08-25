@@ -11,7 +11,7 @@
     },
     abstract: {
       type: String,
-      default: '这是摘要啊详情详情详情，很长很长很长很长很长很长的详情',
+      default: '这是摘要啊详情详情详情，很长很长很长很长很长很很长很长很长很很长很长很长很很长很长很长很很长很长很长很很长很长很长很很长很长很长很很长很长很长很长的详情',
     },
     views: {
       type: Number,
@@ -26,8 +26,12 @@
       default: '文章分类',
     },
     publishTime: {
-      type: Date,
+      type: String,
       default: '2022-08-05',
+    },
+    narrowMode: {
+      type: Boolean,
+      default: true,
     },
   })
 
@@ -44,13 +48,18 @@
     class="rounded-xl md:h-56 shadow-lg hover:shadow-xl overflow-hidden article-item group md:flex justify-between mb-9 lg:hover:scale-102 duration-500">
     <a
       @click="navigateTo('/a')"
-      class="block h-44 md:h-56 md:w-1/3 lg:w-11/20 overflow-hidden"
-      :class="rightImg ? 'order-last' : ''">
+      class="block h-44 md:h-56 md:w-1/3 overflow-hidden"
+      :class="[
+        rightImg ? 'order-last' : '',
+        narrowMode ? 'lg:w-11/20' : 'lg:w-1/3',
+      ]">
       <img
         :src="'https://api.ixiaowai.cn/api/api.php?id=' + Math.random()"
         class="h-full w-full object-cover duration-500 lg:group-hover:scale-115 lg:group-hover:rotate-3" />
     </a>
-    <div class="md:w-2/3 lg:w-9/20 p-5 duration-500">
+    <div
+      class="md:w-2/3 lg:w-9/20 p-5 duration-500"
+      :class="[narrowMode ? 'lg:w-9/20' : 'lg:w-2/3']">
       <div class="text-sm text-gray-400">
         <i class="fa-regular fa-clock mr-1"></i
         ><span class="hidden md:inline-block">发布于</span> {{ publishTime }}
@@ -77,7 +86,7 @@
       <a class="line-clamp-2 text-sm mb-2" @click="navigateTo('/a')">
         {{ abstract }}
       </a>
-      <div class="text-right text-yellow-400 mt-3 hidden md:block">
+      <div class="text-right text-yellow-400 mt-4 hidden md:block">
         <i class="fa-solid fa-caret-right"></i
         ><i class="fa-solid fa-caret-right"></i
         ><i class="fa-solid fa-caret-right"></i>
