@@ -26,8 +26,12 @@
       default: '文章分类',
     },
     publishTime: {
-      type: Date,
+      type: String,
       default: '2022-08-05',
+    },
+    wideMode: {
+      type: Boolean,
+      default: false,
     },
   })
 
@@ -45,12 +49,17 @@
     <a
       @click="navigateTo('/a')"
       class="block h-44 md:h-56 md:w-1/3 lg:w-11/20 overflow-hidden"
-      :class="rightImg ? 'order-last' : ''">
+      :class="[
+        rightImg ? 'order-last' : '',
+        wideMode ? 'lg:w-1/3' : 'lg:w-11/20',
+      ]">
       <img
         :src="'https://api.ixiaowai.cn/api/api.php?id=' + Math.random()"
         class="h-full w-full object-cover duration-500 lg:group-hover:scale-115 lg:group-hover:rotate-3" />
     </a>
-    <div class="md:w-2/3 lg:w-9/20 p-5 duration-500">
+    <div
+      class="md:w-2/3 p-5 duration-500"
+      :class="[wideMode ? 'lg:w-2/3' : 'lg:w-9/20']">
       <div class="text-sm text-gray-400">
         <i class="fa-regular fa-clock mr-1"></i
         ><span class="hidden md:inline-block">发布于</span> {{ publishTime }}
@@ -77,7 +86,7 @@
       <a class="line-clamp-2 text-sm mb-2" @click="navigateTo('/a')">
         {{ abstract }}
       </a>
-      <div class="text-right text-yellow-400 mt-3 hidden md:block">
+      <div class="text-right text-yellow-400 mt-6 hidden md:block">
         <i class="fa-solid fa-caret-right"></i
         ><i class="fa-solid fa-caret-right"></i
         ><i class="fa-solid fa-caret-right"></i>

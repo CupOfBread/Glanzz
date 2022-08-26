@@ -19,6 +19,8 @@
   <div
     class="container mx-auto max-w-5xl grid grid-cols-10 gap-8 w-11/12 lg:w-full mt-4 text-gray-600">
     <div class="lg:col-span-10 col-span-10 text-lg">
+      <Title content="友人帐" icon="fa-solid fa-cubes"></Title>
+      <div class="mb-6">这里是想说的内容，可以在友人帐页面放一些内容，相当于文章详情内容。</div>
       <Title content="个人项目" icon="fa-solid fa-basketball"></Title>
       <div class="mb-6">这里是友链分类的简介，个人项目个人项目&lt;(￣︶￣)↗</div>
       <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-5">

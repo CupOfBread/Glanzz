@@ -2,7 +2,7 @@
   import ImgBoxTitle from '../../components/ImgBoxTitle.vue'
   import Navigation from '../../components/Navigation.vue'
   import Footer from '../footer/Footer.vue'
-  import articleContent from '../../access/crazyman.md?raw'
+  import articleContent from '../../access/example/crazyman.md?raw'
   import { marked } from 'marked'
   import hljs from 'highlight.js'
   import 'highlight.js/styles/vs2015.css'
@@ -31,7 +31,8 @@
           <div
             class="reward bg-red-500 w-10 h-10 text-white rounded-full text-center leading-10 cursor-pointer relative">
             赏
-            <div class="qr bg-white absolute top-14 h-28 w-28 -left-9 duration-500 p-2 shadow-xl z-30">
+            <div
+              class="qr bg-white absolute top-14 h-28 w-28 -left-9 duration-500 p-2 shadow-xl z-30">
               <img src="../../access/images/hh.png" class="w-full h-full" />
             </div>
           </div>
@@ -77,7 +78,7 @@
     </div>
     <div class="lg:col-span-2 lg:block hidden text-lg">
       <div
-        class="rounded-xl md:h-56 shadow-md hover:shadow-xl overflow-hidden group md:flex justify-between mb-9 duration-500 p-6">
+        class="rounded-xl md:h-56 shadow-md hover:shadow-xl overflow-hidden group md:flex justify-between mb-9 duration-500 p-6 sticky top-28">
         这里是边栏
       </div>
     </div>

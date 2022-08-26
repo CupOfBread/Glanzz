@@ -26,8 +26,8 @@
       <Title content="最新文章" icon="fa-dragon"></Title>
       <ArticleListItem
         v-for="(item, index) in [1, 2, 3, 4, 5]"
-        :rightImg="index % 2 === 1"
-        :key="index"></ArticleListItem>
+        :key="index"
+        :rightImg="index % 2 === 1"></ArticleListItem>
 
       <a
         class="rounded-full text-gray-400 border-gray-400 w-40 h-12 border text-center flex items-center justify-center mx-auto hover:border-yellow-500 hover:shadow-yellow-500 hover:shadow-sm mt-20">
@@ -36,8 +36,10 @@
     </div>
     <div class="lg:col-span-3 lg:block hidden relative">
       <AuthorBox></AuthorBox>
-      <Category></Category>
-      <SiteInfo></SiteInfo>
+      <div class="sticky top-32">
+        <Category></Category>
+        <SiteInfo></SiteInfo>
+      </div>
     </div>
   </div>
   <Footer></Footer>
