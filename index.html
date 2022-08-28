@@ -34,10 +34,78 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
-    <link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.6.0/styles/vs2015.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.6.0/styles/vs2015.min.css"
+      rel="stylesheet" />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div id="Loading">
+        <div class="loader-inner ball-beat">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <style type="text/css">
+      #Loading {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        transform: translateY(-50%) translateX(-50%);
+        z-index: 100;
+      }
+
+      @-webkit-keyframes ball-beat {
+        50% {
+          opacity: 0.2;
+          -webkit-transform: scale(0.75);
+          transform: scale(0.75);
+        }
+
+        100% {
+          opacity: 1;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+
+      @keyframes ball-beat {
+        50% {
+          opacity: 0.2;
+          -webkit-transform: scale(0.75);
+          transform: scale(0.75);
+        }
+
+        100% {
+          opacity: 1;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+
+      .ball-beat > div {
+        background-color: #4999ff;
+        width: 10px;
+        height: 10px;
+        border-radius: 100% !important;
+        margin: 2px;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        display: inline-block;
+        -webkit-animation: ball-beat 0.7s 0s infinite linear;
+        animation: ball-beat 0.7s 0s infinite linear;
+      }
+
+      .ball-beat > div:nth-child(2n-1) {
+        -webkit-animation-delay: 0.35s !important;
+        animation-delay: 0.35s !important;
+      }
+    </style>
+
     <script type="module" src="/src/main.ts"></script>
     <div id="aplayer"></div>
     <script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
