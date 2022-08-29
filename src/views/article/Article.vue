@@ -1,10 +1,12 @@
 <script setup lang="ts">
+  import { onMounted, ref } from 'vue'
+  import { marked } from 'marked'
+  import hljs from 'highlight.js'
   import ImgBoxTitle from '../../components/ImgBoxTitle.vue'
   import Navigation from '../../components/Navigation.vue'
   import Footer from '../footer/Footer.vue'
+  import ArticleToc from '../../components/ArticleToc.vue'
   import articleContent from '../../access/example/crazyman.md?raw'
-  import { marked } from 'marked'
-  import hljs from 'highlight.js'
   import 'highlight.js/styles/vs2015.css'
   marked.setOptions({
     renderer: new marked.Renderer(),
@@ -13,6 +15,54 @@
     sanitize: false,
     highlight: (code, lang) => hljs.highlight(code, { language: lang }).value,
   })
+
+  const toc = ref(
+    new Array<{
+      name: any
+      children: any
+      scrollTop: any
+    }>()
+  )
+
+  onMounted(() => {
+    window.addEventListener('scroll', scrollTop, true)
+    getToc()
+  })
+  const scroll = ref(0)
+  function scrollTop() {
+    scroll.value = document.documentElement.scrollTop || document.body.scrollTop
+  }
+  function getToc() {
+    const content = document.getElementById('article')?.children
+    if (content) {
+      for (let i = 0; i < content.length; i++) {
+        let element = content[i] as HTMLElement
+        if (content[i].localName === 'h2') {
+          toc.value.push({
+            name: element.innerHTML,
+            children: new Array(),
+            scrollTop: element.offsetTop,
+          })
+        }
+        if (element.localName === 'h3') {
+          toc.value[toc.value.length - 1].children.push({
+            name: element.innerHTML,
+            children: new Array(),
+            scrollTop: element.offsetTop,
+          })
+        }
+        if (element.localName === 'h4') {
+          toc.value[toc.value.length - 1].children[
+            toc.value[toc.value.length - 1].children.length - 1
+          ].children.push({
+            name: element.innerHTML,
+            children: new Array(),
+            scrollTop: element.offsetTop,
+          })
+        }
+      }
+    }
+  }
 </script>
 
 <template>
@@ -22,9 +72,10 @@
     class="container mx-auto max-w-5xl grid grid-cols-10 gap-4 w-11/12 lg:w-full mt-4 text-gray-600">
     <div class="lg:col-span-8 col-span-10 text-lg">
       <div
-        class="rounded-xl shadow-md hover:shadow-lg overflow-hidden justify-between mb-9 duration-500 p-10">
+        class="rounded-xl shadow-md hover:shadow-lg overflow-hidden justify-between mb-9 duration-500 p-7 md:p-10">
         <div
           v-html="marked(articleContent)"
+          id="article"
           class="article prose prose-p:mb-0 prose-p:font-light w-full max-w-full text-gray-700"></div>
         <hr class="my-8" />
         <div class="justify-center flex gap-8">
@@ -78,8 +129,8 @@
     </div>
     <div class="lg:col-span-2 lg:block hidden text-lg">
       <div
-        class="rounded-xl md:h-56 shadow-md hover:shadow-xl overflow-hidden group md:flex justify-between mb-9 duration-500 p-6 sticky top-28">
-        这里是边栏
+        class="rounded-xl shadow-md hover:shadow-xl overflow-hidden group md:flex justify-between mb-9 duration-500 p-6 sticky top-28">
+        <ArticleToc :toc="toc"></ArticleToc>
       </div>
     </div>
   </div>
