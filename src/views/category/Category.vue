@@ -10,8 +10,7 @@
     title="这是分类的标题"
     type="common"
     description="没错，这就是很长很长很长的的的的描述"></ImgBoxTitle>
-  <div class="container mx-auto max-w-5xl w-11/12 lg:w-full mt-4 text-gray-600">
-    <div class="my-10">这里应该是放分类的小标签</div>
+  <div class="container mx-auto max-w-5xl w-11/12 lg:w-full mt-4 text-gray-600 pt-6">
     <ArticleListItem
       v-for="(item, index) in [1, 2, 3, 4, 5]"
       :wideMode="true"

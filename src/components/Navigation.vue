@@ -8,12 +8,15 @@
 
   const store = useStore()
 
-  const { showMobileNav, AuthorInfo, Nav, SiteInfo } = storeToRefs(store)
+  const { showMobileNav, AuthorInfo, Nav, SiteInfo, Category } =
+    storeToRefs(store)
 
   onMounted(() => {
     window.addEventListener('scroll', scrollTop, true)
   })
+
   const scroll = ref(0)
+  const switchType = ref(0)
   const scrollTop = () => {
     scroll.value = document.documentElement.scrollTop || document.body.scrollTop
   }
@@ -61,13 +64,35 @@
     <div class="text-center mb-4 text-xs text-gray-500">
       {{ AuthorInfo.AuthorInfo.saying }}
     </div>
-
-    <ul class="text-left pl-8 text-gray-800">
+    <div class="px-8 mb-6 justify-between flex text-orange-400">
+      <div
+        class="relative"
+        :class="switchType == 0 ? 'switch-active ' : ''"
+        @click="switchType = 0">
+        导航
+      </div>
+      <div
+        class="relative"
+        :class="switchType == 1 ? 'switch-active ' : ''"
+        @click="switchType = 1">
+        分类
+      </div>
+    </div>
+    <ul class="text-left pl-8 text-gray-800 mb-10" v-show="switchType == 0">
       <li
         class="mb-4"
         v-for="(item, index) in Nav.nav"
         :key="index"
         @click="navigateTo(item.path)">
+        <i class="mr-2" :class="item.icon"></i>{{ item.name }}
+      </li>
+    </ul>
+    <ul class="text-center text-gray-800 mb-10" v-show="switchType == 1">
+      <li
+        class="mb-4"
+        v-for="(item, index) in Category.Categories"
+        :key="index"
+        @click="navigateTo('/c')">
         <i class="mr-2" :class="item.icon"></i>{{ item.name }}
       </li>
     </ul>
@@ -116,9 +141,10 @@
             class="dropdown-menu bg-white absolute top-full left-0 rounded-md py-2 animate__animated animate__bounceInDown animate__faster hidden">
             <a
               class="block hover:bg-gray-200 h-9 leading-9 pl-3"
-              v-for="(item, index) in [1, 2, 3]"
-              :key="index">
-              分类{{ index }}
+              v-for="(item, index) in Category.Categories"
+              :key="index"
+              @click="navigateTo('/c')">
+              <i class="mr-2" :class="item.icon"></i>{{ item.name }}
             </a>
           </div>
         </li>
@@ -139,11 +165,23 @@
 </template>
 
 <style scoped lang="scss">
+  .switch-active::before {
+    position: absolute;
+    z-index: -5;
+    top: 100%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    content: '';
+    border-radius: 0.2rem;
+    background: rgb(255, 176, 92);
+  }
   .text-shadow {
     text-shadow: 0.5px 0.5px #c9c9c9;
   }
   .dropdown-menu {
-    min-width: 12rem;
+    min-width: 10rem;
   }
   .dropdown-menu::before {
     position: absolute;
