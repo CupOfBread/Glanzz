@@ -129,7 +129,7 @@
     </div>
     <div class="lg:col-span-2 lg:block hidden text-lg">
       <div
-        class="rounded-xl shadow-md hover:shadow-xl overflow-hidden group md:flex justify-between mb-9 duration-500 p-6 sticky top-28">
+        class="rounded-xl shadow-md hover:shadow-xl overflow-hidden group md:flex justify-between mb-9 duration-500 p-6 sticky top-20">
         <ArticleToc :toc="toc"></ArticleToc>
       </div>
     </div>

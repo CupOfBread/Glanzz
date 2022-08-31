@@ -86,8 +86,11 @@
     </div>
   </div>
   <div
-    class="w-full h-20 fixed top-0 z-50 transition duration-500 bg-white/10 lg:hover:bg-white/90 hover:shadow backdrop-blur-sm justify-between flex"
-    :class="scroll > 70 ? 'bg-white' : ''">
+    class="w-full h-20 fixed top-0 z-50 transition duration-500 bg-white/10 lg:hover:bg-white/90 hover:shadow backdrop-blur-sm justify-between flex animate__animated"
+    :class="[
+      scroll > 70 ? 'bg-white' : '',
+      scroll > 500 ? 'animate__backOutUp' : 'animate__fadeInDown',
+    ]">
     <div class="text-shadow relative h-20 flex items-center mx-6 text-2xl">
       <div class="mr-4 md:hidden" @click="showMobileNavigation(true)">
         <i class="fa-solid fa-align-justify"></i>
@@ -100,12 +103,24 @@
         class="h-20 mx-8 justify-start space-x-6 items-center hidden md:flex text-shadow">
         <li
           v-for="(item, index) in Nav.nav"
-          :key="index"
-          @click="navigateTo(item.path)">
-          <a class="transition group"
+          class="relative h-20 nav-item"
+          :key="index">
+          <a
+            class="transition group h-20 inline-block leading-20"
+            @click="navigateTo(item.path)"
             ><i class="group-hover:animate-bounce mr-2" :class="item.icon"></i
             >{{ item.name }}</a
           >
+          <div
+            v-show="item.name === '分类页示例'"
+            class="dropdown-menu bg-white absolute top-full left-0 rounded-md py-2 animate__animated animate__bounceInDown animate__faster hidden">
+            <a
+              class="block hover:bg-gray-200 h-9 leading-9 pl-3"
+              v-for="(item, index) in [1, 2, 3]"
+              :key="index">
+              分类{{ index }}
+            </a>
+          </div>
         </li>
       </ul>
       <div class="h-20 flex items-center">
@@ -124,10 +139,29 @@
 </template>
 
 <style scoped lang="scss">
-  .bg-white {
-    background-color: rgba(255, 255, 255, 0.836);
-  }
   .text-shadow {
     text-shadow: 0.5px 0.5px #c9c9c9;
+  }
+  .dropdown-menu {
+    min-width: 12rem;
+  }
+  .dropdown-menu::before {
+    position: absolute;
+    z-index: -5;
+    bottom: 100%;
+    left: 30px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    content: '';
+    transform: rotate(-45deg) translateY(1rem);
+    border-radius: 0.2rem;
+    background: #fff;
+    box-shadow: none;
+  }
+  .nav-item {
+    &:hover .dropdown-menu {
+      display: block;
+    }
   }
 </style>

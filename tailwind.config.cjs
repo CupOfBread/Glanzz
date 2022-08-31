@@ -33,6 +33,9 @@ module.exports = {
       },
       zIndex: {
         '900': '900'
+      },
+      lineHeight:{
+        '20':'5rem'
       }
     }
   },
