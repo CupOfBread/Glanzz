@@ -11,7 +11,7 @@ export default defineConfig({
     rollupOptions: {
       external: [
         'vue',
-        'vueRouter',
+        'vue-router',
         'axios',
         'vue-demi',
         'pinia',
@@ -21,8 +21,8 @@ export default defineConfig({
       plugins: [
         externalGlobals({
           vue: 'Vue',
-          vueRouter: 'VueRouter',
-          axios: 'Axios',
+          'vue-router': 'VueRouter',
+          axios: 'axios',
           'vue-demi': 'VueDemi',
           pinia: 'Pinia',
           marked: 'marked',
