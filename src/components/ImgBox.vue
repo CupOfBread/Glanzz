@@ -67,7 +67,7 @@
     height: auto;
 
     .centerbg {
-      background-image: url('https://api.ixiaowai.cn/api/api.php');
+      background-image: url('https://source.unsplash.com/random');
       background-position: center center;
 
       .focusinfo {
@@ -203,7 +203,7 @@
       background-attachment: scroll !important;
     }
     .centerbg {
-      background-image: url('https://api.sdgou.cc/api/sjbz/?lx=dongman&method=mobile') !important;
+      background-image: url('https://source.unsplash.com/random') !important;
     }
     .focusinfo {
       .center-text {

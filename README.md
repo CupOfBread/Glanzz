@@ -12,14 +12,14 @@ Glanzz 项目【前端-前台】
 
 | 项目         | 版本   | 描述          |
 | ------------ | ------ | ------------- |
-| vue          | 3.2.37 | Vue3          |
-| vue-router   | 4.1.3  | vue-router    |
-| vite         | 3.0.0  | vite          |
-| axios        | 0.27.2 | axios         |
-| marked       | 4.0.19 | marked        |
-| highlight.js | 11.6.0 | axios         |
-| pinia        | 2.0.18 | pinia         |
-| tailwindcss  | 3.1.8  | CSS 框架      |
+| vue          | 3.3.10 | Vue3          |
+| vue-router   | 4.2.5  | vue-router    |
+| vite         | 5.0.5  | vite          |
+| axios        | 1.6.2  | axios         |
+| marked       | 5.0.2  | marked        |
+| highlight.js | 11.9.0 | axios         |
+| pinia        | 2.1.7  | pinia         |
+| tailwindcss  | 3.3.6  | CSS 框架      |
 | aplayer      | 1.10.1 | H5 音乐播放器 |
 
 ## 在线体验
@@ -35,7 +35,7 @@ Glanzz 项目【前端-前台】
   - [x] 封装组件
 - [x] 友链页面 UI
 - [x] 文章详情页面 UI
-- [ ] 涉及分类功能的UI
+- [ ] 涉及分类功能的 UI
 - [ ] 接口联调
 
 ## 快速开始
