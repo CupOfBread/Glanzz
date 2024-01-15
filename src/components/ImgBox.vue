@@ -67,7 +67,7 @@
     height: auto;
 
     .centerbg {
-      background-image: url('https://source.unsplash.com/random');
+      background-image: url('https://api.horosama.com/random.php');
       background-position: center center;
 
       .focusinfo {
@@ -203,7 +203,7 @@
       background-attachment: scroll !important;
     }
     .centerbg {
-      background-image: url('https://source.unsplash.com/random') !important;
+      background-image: url('https://api.horosama.com/random.php') !important;
     }
     .focusinfo {
       .center-text {

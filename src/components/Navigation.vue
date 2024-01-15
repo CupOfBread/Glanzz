@@ -58,7 +58,7 @@
     <div class="rounded-full overflow-hidden w-20 h-20 mx-auto shadow-lg my-4">
       <img
         class="w-full h-full hover:rotate-360 duration-700 object-cover object-center"
-        :src="'https://api.sdgou.cc/api/sjtx/?lx=c1'" />
+        :src="'https://api.horosama.com/random.php?&c=' + Math.random()" />
     </div>
     <div class="text-center mb-4 text-lg">{{ AuthorInfo.AuthorInfo.name }}</div>
     <div class="text-center mb-4 text-xs text-gray-500">

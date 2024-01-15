@@ -31,7 +31,7 @@
   <div class="relative animate__animated animate__fadeInDown">
     <div class="headertop w-full h-60 md:h-80 lg:h-articleImg -z-10">
       <img
-        :src="'https://api.sdgou.cc/api/sjbz/?lx=dongman&c=' + Math.random()"
+        :src="'https://api.horosama.com/random.php?&c=' + Math.random()"
         class="object-cover object-top h-full w-full brightness-65" />
     </div>
     <div

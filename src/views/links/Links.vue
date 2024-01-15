@@ -31,7 +31,7 @@
           :key="index">
           <div class="rounded-full overflow-hidden h-16 w-16 col-span-1">
             <img
-              :src="'https://api.sdgou.cc/api/sjtx/?lx=lx&c=' + Math.random()"
+              :src="'https://api.horosama.com/random.php?&c=' + Math.random()"
               class="w-full h-full object-cover object-center" />
           </div>
           <div class="h-16 col-span-3">
@@ -51,7 +51,7 @@
           :key="index">
           <div class="rounded-full overflow-hidden h-16 w-16 col-span-1">
             <img
-              :src="'https://api.sdgou.cc/api/sjtx/?lx=lx&c=' + Math.random()"
+            :src="'https://api.horosama.com/random.php?&c=' + Math.random()"
               class="w-full h-full object-cover object-center" />
           </div>
           <div class="h-16 col-span-3">

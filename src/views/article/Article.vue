@@ -12,8 +12,6 @@
     renderer: new marked.Renderer(),
     gfm: true,
     pedantic: false,
-    sanitize: false,
-    highlight: (code, lang) => hljs.highlight(code, { language: lang }).value,
   })
 
   const toc = ref(
@@ -104,9 +102,7 @@
         <div class="grid md:grid-cols-2">
           <div class="overflow-hidden h-36 relative group cursor-pointer">
             <img
-              :src="
-                'https://api.sdgou.cc/api/sjbz/?lx=dongman&c=' + Math.random()
-              "
+            :src="'https://api.horosama.com/random.php?&c=' + Math.random()"
               class="object-cover object-top h-full w-full brightness-65 group-hover:scale-105 duration-500" />
             <div class="absolute top-1/4 left-6 text-white">
               <div class="text-gray-200 text-xs">上一篇</div>
@@ -115,9 +111,7 @@
           </div>
           <div class="overflow-hidden h-36 relative group cursor-pointer">
             <img
-              :src="
-                'https://api.sdgou.cc/api/sjbz/?lx=dongman&c=' + Math.random()
-              "
+            :src="'https://api.horosama.com/random.php?&c=' + Math.random()"
               class="object-cover object-top h-full w-full brightness-65 group-hover:scale-105 duration-500" />
             <div class="absolute top-1/4 right-6 text-white">
               <div class="text-gray-200 text-xs text-right">下一篇</div>

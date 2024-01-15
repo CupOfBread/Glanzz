@@ -21,7 +21,7 @@
       class="rounded-full overflow-hidden w-20 h-20 inline-block mt-6 shadow-lg">
       <img
         class="w-full h-full hover:rotate-360 duration-700"
-        :src="'https://api.sdgou.cc/api/sjtx/?lx=c1'" />
+        :src="'https://api.horosama.com/random.php?&c=' + Math.random()" />
     </div>
     <div class="my-4 text-xl">{{ AuthorInfo.AuthorInfo.name }}</div>
     <div class="mb-6">{{ AuthorInfo.AuthorInfo.saying }}</div>

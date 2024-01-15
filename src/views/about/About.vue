@@ -10,8 +10,6 @@
     renderer: new marked.Renderer(),
     gfm: true,
     pedantic: false,
-    sanitize: false,
-    highlight: (code, lang) => hljs.highlight(code, { language: lang }).value,
   })
 </script>
 
